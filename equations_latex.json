@@ -1,0 +1,257 @@
+{
+  "1": {
+    "lhs": "half",
+    "network": "root",
+    "rhs": "Set({\\#}_{}, -)"
+  },
+  "2": {
+    "lhs": "zero",
+    "network": "root",
+    "rhs": "Set({\\#}_{}, -)"
+  },
+  "3": {
+    "lhs": "dt",
+    "network": "root",
+    "rhs": "diffSpace({t}_{N})"
+  },
+  "4": {
+    "lhs": "T",
+    "network": "physical",
+    "rhs": "\\ParDiff{{U}_{N}}{{S}_{N}}"
+  },
+  "5": {
+    "lhs": "p",
+    "network": "physical",
+    "rhs": "\\left( -\\ParDiff{{U}_{N}}{{V}_{N}} \\right)"
+  },
+  "7": {
+    "lhs": "H",
+    "network": "physical",
+    "rhs": "{U}_{N}  + {p}_{N} \\, . \\, {V}_{N}"
+  },
+  "8": {
+    "lhs": "vx",
+    "network": "physical",
+    "rhs": "\\ParDiff{{r_{x}}_{N}}{{t}_{N}}"
+  },
+  "10": {
+    "lhs": "Ax",
+    "network": "physical",
+    "rhs": "{r_{y}}_{N} \\, . \\, {r_{z}}_{N}"
+  },
+  "14": {
+    "lhs": "cp",
+    "network": "materialDB",
+    "rhs": "\\ParDiff{{H}_{N}}{{T}_{N}}"
+  },
+  "18": {
+    "lhs": "mu",
+    "network": "physical",
+    "rhs": "\\ParDiff{{U}_{N}}{{n}_{{N S}}}"
+  },
+  "31": {
+    "lhs": "kq_x",
+    "network": "materialDB",
+    "rhs": "\\left( -{P}_{N, A, dt} \\right) \\stackrel{N}{\\,\\star\\,} \\left(\\left( {V}_{N} \\right)^{-1} \\, . \\, \\ParDiff{{U}_{N}}{{T}_{N}} \\, . \\, {v_{x}}_{N}\\right)"
+  },
+  "32": {
+    "lhs": "kq_x",
+    "network": "materialDB >>> liquid",
+    "rhs": "{k^{q_x}}_{A, dt}"
+  },
+  "39": {
+    "lhs": "fq",
+    "network": "macroscopic",
+    "rhs": "{F}_{N, A} \\stackrel{A}{\\,\\star\\,} \\left(\\left( -{k^{q_x}}_{A, dt} \\right) \\, . \\, {A_{x}}_{N} \\, . \\, {F}_{N, A} \\stackrel{N}{\\,\\star\\,} {T}_{N}\\right)"
+  },
+  "41": {
+    "lhs": "n0",
+    "network": "macroscopic",
+    "rhs": "Set({n}_{{N S}}, -)"
+  },
+  "42": {
+    "lhs": "c",
+    "network": "macroscopic",
+    "rhs": "\\left( {V}_{N} \\right)^{-1} \\, {\\odot} \\, {n}_{{N S}}"
+  },
+  "43": {
+    "lhs": "c_KS",
+    "network": "macroscopic",
+    "rhs": "{P}_{{N S}, {K S}} \\stackrel{{N S}}{\\,\\star\\,} {c}_{{N S}}"
+  },
+  "44": {
+    "lhs": "N_NS_NK",
+    "network": "macroscopic",
+    "rhs": "{P}_{{N S}, {K S}} \\stackrel{{K S}}{\\,\\star\\,} {N}_{K, {K S}} \\stackrel{K}{\\,\\star\\,} {P}_{K, {N K}}"
+  },
+  "45": {
+    "lhs": "T_NK",
+    "network": "macroscopic",
+    "rhs": "{P}_{N, {N K}} \\stackrel{N}{\\,\\star\\,} {T}_{N}"
+  },
+  "46": {
+    "lhs": "K",
+    "network": "macroscopic",
+    "rhs": "{K^{o}}_{K, dt} \\, {\\odot} \\, exp({E^{A}}_{K} \\, {\\odot} \\, \\left( {R}_{} \\, . \\, {T}_{{N K}} \\right)^{-1})"
+  },
+  "47": {
+    "lhs": "c_KS_o",
+    "network": "macroscopic",
+    "rhs": "Set({c}_{{K S}}, -)"
+  },
+  "49": {
+    "lhs": "x_KS",
+    "network": "macroscopic",
+    "rhs": "\\left( {c^{o}}_{{K S}} \\right)^{-1} \\, . \\, {c}_{{K S}}"
+  },
+  "52": {
+    "lhs": "phi",
+    "network": "macroscopic",
+    "rhs": "{P}_{{N K}, {K S}} \\stackrel{{K S}}{\\,\\star\\,} \\left(\\prod\\left(  {x}_{{K S}}^{{N}_{K, {K S}}}   \\right)\\right)"
+  },
+  "53": {
+    "lhs": "xi",
+    "network": "macroscopic",
+    "rhs": "{K}_{{N K}, dt} \\, . \\, {\\phi}_{{N K}}"
+  },
+  "54": {
+    "lhs": "pn",
+    "network": "macroscopic",
+    "rhs": "{V}_{N} \\, {\\odot} \\, \\left({N}_{{N S}, {N K}} \\stackrel{{N K}}{\\,\\star\\,} {\\xi}_{{N K}, dt}\\right)"
+  },
+  "57": {
+    "lhs": "dir",
+    "network": "macroscopic",
+    "rhs": "\\text{sign} \\left( {F}_{N, A} \\stackrel{N}{\\,\\star\\,} {p}_{N} \\right)"
+  },
+  "58": {
+    "lhs": "S_NS_AS",
+    "network": "macroscopic",
+    "rhs": "{1 \\backslash 2}_{} \\, . \\, \\left({F}_{{N S}, {A S}}  - {d}_{A} \\, {\\odot} \\, |{F}_{{N S}, {A S}}|\\right)"
+  },
+  "59": {
+    "lhs": "c_AS",
+    "network": "macroscopic",
+    "rhs": "{S}_{{N S}, {A S}} \\stackrel{{N S}}{\\,\\star\\,} {c}_{{N S}}"
+  },
+  "60": {
+    "lhs": "fnv",
+    "network": "macroscopic",
+    "rhs": "{F}_{{N S}, {A S}} \\stackrel{{A S}}{\\,\\star\\,} \\left({\\hat{V}}_{A, dt} \\, {\\odot} \\, {c}_{{A S}}\\right)"
+  },
+  "62": {
+    "lhs": "dndt",
+    "network": "macroscopic",
+    "rhs": "{\\hat{n}^{v}}_{{N S}, dt}  + {\\hat{n}^{d}}_{{N S}, dt}  + {\\tilde{n}}_{{N S}, dt}"
+  },
+  "63": {
+    "lhs": "to",
+    "network": "root",
+    "rhs": "Set({t}_{N}, -)"
+  },
+  "64": {
+    "lhs": "te",
+    "network": "root",
+    "rhs": "Set({t}_{N}, -)"
+  },
+  "65": {
+    "lhs": "n",
+    "network": "macroscopic",
+    "rhs": "\\int_{ {to}_{N} }^{ {te}_{N} } \\, {dndt}_{{N S}, dt} \\enskip d\\,{t}_{N}  + {n^{0}}_{{N S}}"
+  },
+  "71": {
+    "lhs": "rho",
+    "network": "materialDB",
+    "rhs": "{m}_{N} \\, . \\, \\left( {V}_{N} \\right)^{-1}"
+  },
+  "76": {
+    "lhs": "kc_x",
+    "network": "materialDB",
+    "rhs": "\\left( -{P}_{N, A, dt} \\right) \\stackrel{N}{\\,\\star\\,} \\left({\\lambda}_{S} \\stackrel{ S \\, \\in \\, {N S} }{\\,\\star\\,} \\left( {\\mu}_{{N S}} \\right)^{-1}\\right) \\, . \\, \\left( {V}_{N} \\right)^{-1} \\, . \\, \\ParDiff{{U}_{N}}{{p}_{N}} \\, . \\, {v_{x}}_{N}"
+  },
+  "78": {
+    "lhs": "kv_x",
+    "network": "materialDB",
+    "rhs": "\\left( {\\rho}_{N} \\right)^{-1} \\, . \\, {k^{c_x}}_{N, A, dt}"
+  },
+  "79": {
+    "lhs": "kv_x",
+    "network": "materialDB >>> liquid",
+    "rhs": "{k^{v_x}}_{N, A, dt}"
+  },
+  "80": {
+    "lhs": "kd_x",
+    "network": "materialDB >>> liquid",
+    "rhs": "{k^{d_x}}_{{N S}, {A S}, dt}"
+  },
+  "81": {
+    "lhs": "kd_x",
+    "network": "materialDB",
+    "rhs": "\\left( -{P}_{{N S}, {A S}, dt} \\right) \\stackrel{{N S}}{\\,\\star\\,} \\left({v_{x}}_{N} \\, . \\, \\left( {V}_{N} \\right)^{-1} \\, {\\odot} \\, \\left( {\\mu}_{{N S}} \\right)^{-1}\\right) \\, . \\, \\ParDiff{{U}_{N}}{{\\mu}_{{N S}}}"
+  },
+  "82": {
+    "lhs": "fnd",
+    "network": "macroscopic",
+    "rhs": "{A_{x}}_{N} \\, {\\odot} \\, {F}_{{N S}, {A S}} \\stackrel{{A S}}{\\,\\star\\,} \\left(\\left( -{k^{d_x}}_{{N S}, {A S}, dt} \\right) \\, . \\, {F}_{{N S}, {A S}} \\stackrel{{N S}}{\\,\\star\\,} {\\mu}_{{N S}}\\right)"
+  },
+  "83": {
+    "lhs": "fV",
+    "network": "macroscopic",
+    "rhs": "{F}_{N, A} \\stackrel{A}{\\,\\star\\,} \\left( -{k^{v_x}}_{N, A, dt} \\right) \\, . \\, {A_{x}}_{N} \\, . \\, {F}_{N, A} \\stackrel{N}{\\,\\star\\,} {p}_{N}"
+  },
+  "86": {
+    "lhs": "k_granulate",
+    "network": "materialDB >>> solid",
+    "rhs": "{k_{granulate}}_{dt}"
+  },
+  "87": {
+    "lhs": "pN",
+    "network": "solid",
+    "rhs": "{k_{granulate}}_{dt} \\, . \\, {r}_{N}"
+  },
+  "89": {
+    "lhs": "dN",
+    "network": "solid",
+    "rhs": "\\ParDiff{{\\tilde{N}}_{N, dt}}{{r}_{N}}"
+  },
+  "90": {
+    "lhs": "A",
+    "network": "physical",
+    "rhs": "{U}_{N}  - {T}_{N} \\, . \\, {S}_{N}"
+  },
+  "91": {
+    "lhs": "G",
+    "network": "physical",
+    "rhs": "{U}_{N}  + {p}_{N} \\, . \\, {V}_{N}  - {T}_{N} \\, . \\, {S}_{N}"
+  },
+  "92": {
+    "lhs": "mu",
+    "network": "physical",
+    "rhs": "\\ParDiff{{G}_{N}}{{n}_{{N S}}}"
+  },
+  "93": {
+    "lhs": "alpha",
+    "network": "mixing",
+    "rhs": "{a}_{N, dt} \\, . \\, sin({t}_{N} \\, . \\, {f}_{})"
+  },
+  "94": {
+    "lhs": "one",
+    "network": "root",
+    "rhs": "Set({\\#}_{}, -)"
+  },
+  "95": {
+    "lhs": "y_one",
+    "network": "mixing",
+    "rhs": "Set({y}_{N}, -)"
+  },
+  "96": {
+    "lhs": "dy",
+    "network": "mixing",
+    "rhs": "{\\alpha}_{N, dt} \\, . \\, \\left({\\gamma}_{} \\, . \\, {y}_{N}  - {\\beta}_{} \\, . \\, \\left({y}_{N}  - {1}_{N}\\right)\\right)"
+  },
+  "97": {
+    "lhs": "dndt",
+    "network": "macroscopic",
+    "rhs": "Set({dndt}_{{N S}, dt}, {0}_{})"
+  }
+}

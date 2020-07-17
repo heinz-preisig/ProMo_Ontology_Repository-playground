@@ -1,0 +1,780 @@
+{
+  "ID_tree": {
+    "0": {
+      "ancestors": [],
+      "children": [
+        1,
+        2,
+        3
+      ]
+    },
+    "1": {
+      "ancestors": [
+        0
+      ],
+      "children": []
+    },
+    "2": {
+      "ancestors": [
+        0
+      ],
+      "children": []
+    },
+    "3": {
+      "ancestors": [
+        0
+      ],
+      "children": [
+        4,
+        5,
+        6
+      ]
+    },
+    "4": {
+      "ancestors": [
+        3,
+        0
+      ],
+      "children": []
+    },
+    "5": {
+      "ancestors": [
+        3,
+        0
+      ],
+      "children": []
+    },
+    "6": {
+      "ancestors": [
+        3,
+        0
+      ],
+      "children": [
+        7,
+        8,
+        9
+      ]
+    },
+    "7": {
+      "ancestors": [
+        6,
+        3,
+        0
+      ],
+      "children": []
+    },
+    "8": {
+      "ancestors": [
+        6,
+        3,
+        0
+      ],
+      "children": []
+    },
+    "9": {
+      "ancestors": [
+        6,
+        3,
+        0
+      ],
+      "children": [
+        10,
+        11,
+        12
+      ]
+    },
+    "10": {
+      "ancestors": [
+        9,
+        6,
+        3,
+        0
+      ],
+      "children": []
+    },
+    "11": {
+      "ancestors": [
+        9,
+        6,
+        3,
+        0
+      ],
+      "children": []
+    },
+    "12": {
+      "ancestors": [
+        9,
+        6,
+        3,
+        0
+      ],
+      "children": [
+        13,
+        14
+      ]
+    },
+    "13": {
+      "ancestors": [
+        12,
+        9,
+        6,
+        3,
+        0
+      ],
+      "children": []
+    },
+    "14": {
+      "ancestors": [
+        12,
+        9,
+        6,
+        3,
+        0
+      ],
+      "children": []
+    }
+  },
+  "named_networks": {
+    "control": [
+      "control"
+    ],
+    "gas": [
+      "gas"
+    ],
+    "liquid": [
+      "liquid"
+    ],
+    "materialDB": [
+      "materialDB"
+    ],
+    "mixing": [
+      "mixing"
+    ],
+    "solid": [
+      "solid"
+    ]
+  },
+  "nodes": {
+    "0": {
+      "name": 0,
+      "network": null,
+      "named_network": null,
+      "class": "node_composite",
+      "type": "node_composite",
+      "tokens": {}
+    },
+    "1": {
+      "name": "default",
+      "network": "solid",
+      "named_network": "solid",
+      "class": "node_simple",
+      "type": "constant",
+      "tokens": {
+        "energy": []
+      },
+      "injected_typed_tokens": {}
+    },
+    "2": {
+      "name": "default",
+      "network": "solid",
+      "named_network": "solid",
+      "class": "node_simple",
+      "type": "constant",
+      "tokens": {
+        "energy": []
+      },
+      "injected_typed_tokens": {}
+    },
+    "3": {
+      "name": "default",
+      "network": null,
+      "named_network": null,
+      "class": "node_composite",
+      "type": "node_composite",
+      "tokens": {}
+    },
+    "4": {
+      "name": "default",
+      "network": "solid",
+      "named_network": "solid",
+      "class": "node_simple",
+      "type": "constant",
+      "tokens": {
+        "energy": []
+      },
+      "injected_typed_tokens": {}
+    },
+    "5": {
+      "name": "default",
+      "network": "solid",
+      "named_network": "solid",
+      "class": "node_simple",
+      "type": "constant",
+      "tokens": {
+        "energy": []
+      },
+      "injected_typed_tokens": {}
+    },
+    "6": {
+      "name": "default",
+      "network": null,
+      "named_network": null,
+      "class": "node_composite",
+      "type": "node_composite",
+      "tokens": {}
+    },
+    "7": {
+      "name": "default",
+      "network": "solid",
+      "named_network": "solid",
+      "class": "node_simple",
+      "type": "constant",
+      "tokens": {
+        "energy": []
+      },
+      "injected_typed_tokens": {}
+    },
+    "8": {
+      "name": "default",
+      "network": "solid",
+      "named_network": "solid",
+      "class": "node_simple",
+      "type": "constant",
+      "tokens": {
+        "energy": []
+      },
+      "injected_typed_tokens": {}
+    },
+    "9": {
+      "name": "default",
+      "network": null,
+      "named_network": null,
+      "class": "node_composite",
+      "type": "node_composite",
+      "tokens": {}
+    },
+    "10": {
+      "name": "default",
+      "network": "solid",
+      "named_network": "solid",
+      "class": "node_simple",
+      "type": "constant",
+      "tokens": {
+        "energy": []
+      },
+      "injected_typed_tokens": {}
+    },
+    "11": {
+      "name": "default",
+      "network": "solid",
+      "named_network": "solid",
+      "class": "node_simple",
+      "type": "constant",
+      "tokens": {
+        "energy": []
+      },
+      "injected_typed_tokens": {}
+    },
+    "12": {
+      "name": "default",
+      "network": null,
+      "named_network": null,
+      "class": "node_composite",
+      "type": "node_composite",
+      "tokens": {}
+    },
+    "13": {
+      "name": "default",
+      "network": "solid",
+      "named_network": "solid",
+      "class": "node_simple",
+      "type": "constant",
+      "tokens": {
+        "energy": []
+      },
+      "injected_typed_tokens": {}
+    },
+    "14": {
+      "name": "default",
+      "network": "solid",
+      "named_network": "solid",
+      "class": "node_simple",
+      "type": "constant",
+      "tokens": {
+        "energy": []
+      },
+      "injected_typed_tokens": {}
+    }
+  },
+  "domains": {},
+  "arcs": {
+    "0": {
+      "name": "1 | 2",
+      "source": 1,
+      "sink": 2,
+      "token": "energy",
+      "typed_tokens": [],
+      "network": "solid",
+      "named_network": "solid",
+      "mechanism": "conduction",
+      "nature": "lumped"
+    },
+    "1": {
+      "name": "4 | 5",
+      "source": 4,
+      "sink": 5,
+      "token": "energy",
+      "typed_tokens": [],
+      "network": "solid",
+      "named_network": "solid",
+      "mechanism": "conduction",
+      "nature": "lumped"
+    },
+    "2": {
+      "name": "7 | 8",
+      "source": 7,
+      "sink": 8,
+      "token": "energy",
+      "typed_tokens": [],
+      "network": "solid",
+      "named_network": "solid",
+      "mechanism": "conduction",
+      "nature": "lumped"
+    },
+    "3": {
+      "name": "10 | 11",
+      "source": 10,
+      "sink": 11,
+      "token": "energy",
+      "typed_tokens": [],
+      "network": "solid",
+      "named_network": "solid",
+      "mechanism": "conduction",
+      "nature": "lumped"
+    },
+    "4": {
+      "name": "13 | 14",
+      "source": 13,
+      "sink": 14,
+      "token": "energy",
+      "typed_tokens": [],
+      "network": "solid",
+      "named_network": "solid",
+      "mechanism": "conduction",
+      "nature": "lumped"
+    },
+    "5": {
+      "name": "13 | 1",
+      "source": 13,
+      "sink": 1,
+      "token": "energy",
+      "typed_tokens": [],
+      "network": "solid",
+      "named_network": "solid",
+      "mechanism": "conduction",
+      "nature": "lumped"
+    },
+    "6": {
+      "name": "13 | 10",
+      "source": 13,
+      "sink": 10,
+      "token": "energy",
+      "typed_tokens": [],
+      "network": "solid",
+      "named_network": "solid",
+      "mechanism": "conduction",
+      "nature": "lumped"
+    },
+    "7": {
+      "name": "10 | 7",
+      "source": 10,
+      "sink": 7,
+      "token": "energy",
+      "typed_tokens": [],
+      "network": "solid",
+      "named_network": "solid",
+      "mechanism": "conduction",
+      "nature": "lumped"
+    },
+    "8": {
+      "name": "7 | 4",
+      "source": 7,
+      "sink": 4,
+      "token": "energy",
+      "typed_tokens": [],
+      "network": "solid",
+      "named_network": "solid",
+      "mechanism": "conduction",
+      "nature": "lumped"
+    }
+  },
+  "scenes": {
+    "0": {
+      "nodes": {
+        "1": {
+          "position_x": -165.0,
+          "position_y": -143.0,
+          "root": {
+            "position_x": 0,
+            "position_y": 0
+          },
+          "name": {
+            "position_x": 0,
+            "position_y": 50
+          },
+          "network": {
+            "position_x": 0,
+            "position_y": 0
+          }
+        },
+        "2": {
+          "position_x": 135,
+          "position_y": -110,
+          "root": {
+            "position_x": 0,
+            "position_y": 0
+          },
+          "name": {
+            "position_x": 0,
+            "position_y": 50
+          },
+          "network": {
+            "position_x": 0,
+            "position_y": 0
+          }
+        },
+        "3": {
+          "position_x": -287.0,
+          "position_y": 89.0,
+          "root": {
+            "position_x": -20,
+            "position_y": -20
+          },
+          "name": {
+            "position_x": 0,
+            "position_y": 50
+          }
+        }
+      },
+      "arcs": {
+        "0": [
+          [
+            -105,
+            -5
+          ],
+          [
+            45,
+            -5
+          ]
+        ],
+        "5": []
+      }
+    },
+    "1": {
+      "nodes": {},
+      "arcs": {
+        "0": [],
+        "5": []
+      }
+    },
+    "2": {
+      "nodes": {},
+      "arcs": {
+        "0": []
+      }
+    },
+    "3": {
+      "nodes": {
+        "4": {
+          "position_x": -165.0,
+          "position_y": -143.0,
+          "root": {
+            "position_x": 0,
+            "position_y": 0
+          },
+          "name": {
+            "position_x": 0,
+            "position_y": 50
+          },
+          "network": {
+            "position_x": 0,
+            "position_y": 0
+          }
+        },
+        "5": {
+          "position_x": 135,
+          "position_y": -110,
+          "root": {
+            "position_x": 0,
+            "position_y": 0
+          },
+          "name": {
+            "position_x": 0,
+            "position_y": 50
+          },
+          "network": {
+            "position_x": 0,
+            "position_y": 0
+          }
+        },
+        "6": {
+          "position_x": -287.0,
+          "position_y": 89.0,
+          "root": {
+            "position_x": -20,
+            "position_y": -20
+          },
+          "name": {
+            "position_x": 0,
+            "position_y": 50
+          }
+        }
+      },
+      "arcs": {
+        "1": [
+          [
+            -105,
+            -5
+          ],
+          [
+            45,
+            -5
+          ]
+        ],
+        "5": [],
+        "8": []
+      }
+    },
+    "4": {
+      "nodes": {},
+      "arcs": {
+        "1": [],
+        "8": []
+      }
+    },
+    "5": {
+      "nodes": {},
+      "arcs": {
+        "1": []
+      }
+    },
+    "6": {
+      "nodes": {
+        "7": {
+          "position_x": -165.0,
+          "position_y": -143.0,
+          "root": {
+            "position_x": 0,
+            "position_y": 0
+          },
+          "name": {
+            "position_x": 0,
+            "position_y": 50
+          },
+          "network": {
+            "position_x": 0,
+            "position_y": 0
+          }
+        },
+        "8": {
+          "position_x": 135,
+          "position_y": -110,
+          "root": {
+            "position_x": 0,
+            "position_y": 0
+          },
+          "name": {
+            "position_x": 0,
+            "position_y": 50
+          },
+          "network": {
+            "position_x": 0,
+            "position_y": 0
+          }
+        },
+        "9": {
+          "position_x": -287.0,
+          "position_y": 89.0,
+          "root": {
+            "position_x": -20,
+            "position_y": -20
+          },
+          "name": {
+            "position_x": 0,
+            "position_y": 50
+          }
+        }
+      },
+      "arcs": {
+        "2": [
+          [
+            -105,
+            -5
+          ],
+          [
+            45,
+            -5
+          ]
+        ],
+        "5": [],
+        "7": [],
+        "8": []
+      }
+    },
+    "7": {
+      "nodes": {},
+      "arcs": {
+        "2": [],
+        "7": [],
+        "8": []
+      }
+    },
+    "8": {
+      "nodes": {},
+      "arcs": {
+        "2": []
+      }
+    },
+    "9": {
+      "nodes": {
+        "10": {
+          "position_x": -165.0,
+          "position_y": -143.0,
+          "root": {
+            "position_x": 0,
+            "position_y": 0
+          },
+          "name": {
+            "position_x": 0,
+            "position_y": 50
+          },
+          "network": {
+            "position_x": 0,
+            "position_y": 0
+          }
+        },
+        "11": {
+          "position_x": 135,
+          "position_y": -110,
+          "root": {
+            "position_x": 0,
+            "position_y": 0
+          },
+          "name": {
+            "position_x": 0,
+            "position_y": 50
+          },
+          "network": {
+            "position_x": 0,
+            "position_y": 0
+          }
+        },
+        "12": {
+          "position_x": -287.0,
+          "position_y": 89.0,
+          "root": {
+            "position_x": -20,
+            "position_y": -20
+          },
+          "name": {
+            "position_x": 0,
+            "position_y": 50
+          }
+        }
+      },
+      "arcs": {
+        "3": [
+          [
+            -105,
+            -5
+          ],
+          [
+            45,
+            -5
+          ]
+        ],
+        "5": [],
+        "6": [],
+        "7": []
+      }
+    },
+    "10": {
+      "nodes": {},
+      "arcs": {
+        "3": [],
+        "6": [],
+        "7": []
+      }
+    },
+    "11": {
+      "nodes": {},
+      "arcs": {
+        "3": []
+      }
+    },
+    "12": {
+      "nodes": {
+        "13": {
+          "position_x": -165.0,
+          "position_y": -143.0,
+          "root": {
+            "position_x": 0,
+            "position_y": 0
+          },
+          "name": {
+            "position_x": 0,
+            "position_y": 50
+          },
+          "network": {
+            "position_x": 0,
+            "position_y": 0
+          }
+        },
+        "14": {
+          "position_x": 135,
+          "position_y": -110,
+          "root": {
+            "position_x": 0,
+            "position_y": 0
+          },
+          "name": {
+            "position_x": 0,
+            "position_y": 50
+          },
+          "network": {
+            "position_x": 0,
+            "position_y": 0
+          }
+        }
+      },
+      "arcs": {
+        "4": [
+          [
+            -105,
+            -5
+          ],
+          [
+            45,
+            -5
+          ]
+        ],
+        "5": [],
+        "6": []
+      }
+    },
+    "13": {
+      "nodes": {},
+      "arcs": {
+        "4": [],
+        "5": [],
+        "6": []
+      }
+    },
+    "14": {
+      "nodes": {},
+      "arcs": {
+        "4": []
+      }
+    }
+  }
+}

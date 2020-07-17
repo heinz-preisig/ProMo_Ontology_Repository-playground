@@ -1,0 +1,257 @@
+{
+  "1": {
+    "lhs": "half",
+    "network": "root",
+    "rhs": "Instantiate(value, -)"
+  },
+  "2": {
+    "lhs": "zero",
+    "network": "root",
+    "rhs": "Instantiate(value, -)"
+  },
+  "3": {
+    "lhs": "dt",
+    "network": "root",
+    "rhs": "t"
+  },
+  "4": {
+    "lhs": "T",
+    "network": "physical",
+    "rhs": "ParDiff(U,S)"
+  },
+  "5": {
+    "lhs": "p",
+    "network": "physical",
+    "rhs": "- ParDiff(U,V)"
+  },
+  "7": {
+    "lhs": "H",
+    "network": "physical",
+    "rhs": "U + p .* V"
+  },
+  "8": {
+    "lhs": "vx",
+    "network": "physical",
+    "rhs": "ParDiff(rx,t)"
+  },
+  "10": {
+    "lhs": "Ax",
+    "network": "physical",
+    "rhs": "ry .* rz"
+  },
+  "14": {
+    "lhs": "cp",
+    "network": "materialDB",
+    "rhs": "ParDiff(H,T)"
+  },
+  "18": {
+    "lhs": "mu",
+    "network": "physical",
+    "rhs": "ParDiff(U,n)"
+  },
+  "31": {
+    "lhs": "kq_x",
+    "network": "materialDB",
+    "rhs": "( - P_N_A_dt )'  * (inv(V) .* ParDiff(U,T) .* vx)"
+  },
+  "32": {
+    "lhs": "kq_x",
+    "network": "materialDB >>> liquid",
+    "rhs": "kq_x"
+  },
+  "39": {
+    "lhs": "fq",
+    "network": "macroscopic",
+    "rhs": "F * (( - kq_x .* ( Ax )'  .* F )'  * T)"
+  },
+  "41": {
+    "lhs": "n0",
+    "network": "macroscopic",
+    "rhs": "Instantiate(n, -)"
+  },
+  "42": {
+    "lhs": "c",
+    "network": "macroscopic",
+    "rhs": "khatriRao(inv(V), [N], n, [N_x_S])"
+  },
+  "43": {
+    "lhs": "c_KS",
+    "network": "macroscopic",
+    "rhs": "( P_NS_KS )'  * c"
+  },
+  "44": {
+    "lhs": "N_NS_NK",
+    "network": "macroscopic",
+    "rhs": "( ( P_NS_KS * ( N_KS_K )'  )'  )'  * P_K_NK"
+  },
+  "45": {
+    "lhs": "T_NK",
+    "network": "macroscopic",
+    "rhs": "( P_N_NK )'  * T"
+  },
+  "46": {
+    "lhs": "K",
+    "network": "macroscopic",
+    "rhs": "khatriRao(Ko, [K, dt], exp(khatriRao(ka, [K], inv(R .* T_NK), [N_x_K])), [N_x_K])"
+  },
+  "47": {
+    "lhs": "c_KS_o",
+    "network": "macroscopic",
+    "rhs": "Instantiate(c_KS, -)"
+  },
+  "49": {
+    "lhs": "x_KS",
+    "network": "macroscopic",
+    "rhs": "inv(c_KS_o) .* c_KS"
+  },
+  "52": {
+    "lhs": "phi",
+    "network": "macroscopic",
+    "rhs": "P_NK_KS * (Product( x_KS ** (N_KS_K) \\, N_KS_K ))"
+  },
+  "53": {
+    "lhs": "xi",
+    "network": "macroscopic",
+    "rhs": "K .* phi"
+  },
+  "54": {
+    "lhs": "pn",
+    "network": "macroscopic",
+    "rhs": "khatriRao(V, [N], (N_NS_NK * xi), [N_x_S, dt])"
+  },
+  "57": {
+    "lhs": "dir",
+    "network": "macroscopic",
+    "rhs": "sign(( F )'  * p)"
+  },
+  "58": {
+    "lhs": "S_NS_AS",
+    "network": "macroscopic",
+    "rhs": "half .* (F_NS_AS - khatriRao(dir, [A], abs(F_NS_AS), [N_x_S, A_x_S]))"
+  },
+  "59": {
+    "lhs": "c_AS",
+    "network": "macroscopic",
+    "rhs": "( S_NS_AS )'  * c"
+  },
+  "60": {
+    "lhs": "fnv",
+    "network": "macroscopic",
+    "rhs": "F_NS_AS * (khatriRao(fV, [A, dt], c_AS, [A_x_S]))"
+  },
+  "62": {
+    "lhs": "dndt",
+    "network": "macroscopic",
+    "rhs": "fnv + fnd + pn"
+  },
+  "63": {
+    "lhs": "to",
+    "network": "root",
+    "rhs": "Instantiate(t, -)"
+  },
+  "64": {
+    "lhs": "te",
+    "network": "root",
+    "rhs": "Instantiate(t, -)"
+  },
+  "65": {
+    "lhs": "n",
+    "network": "macroscopic",
+    "rhs": "Integral(dndt,t,to,te) + n0"
+  },
+  "71": {
+    "lhs": "rho",
+    "network": "materialDB",
+    "rhs": "m .* inv(V)"
+  },
+  "76": {
+    "lhs": "kc_x",
+    "network": "materialDB",
+    "rhs": "( - P_N_A_dt )'  * (blockReduce(mm, S, N_x_S, inv(mu))) .* ( inv(V) )'  .* ParDiff(U,p) .* vx"
+  },
+  "78": {
+    "lhs": "kv_x",
+    "network": "materialDB",
+    "rhs": "inv(rho) .* kc_x"
+  },
+  "79": {
+    "lhs": "kv_x",
+    "network": "materialDB >>> liquid",
+    "rhs": "kv_x"
+  },
+  "80": {
+    "lhs": "kd_x",
+    "network": "materialDB >>> liquid",
+    "rhs": "kd_x"
+  },
+  "81": {
+    "lhs": "kd_x",
+    "network": "materialDB",
+    "rhs": "( - P_NS_AS_dt )'  * (khatriRao(vx .* inv(V), [N], inv(mu), [N_x_S])) .* ( ParDiff(U,mu) )' "
+  },
+  "82": {
+    "lhs": "fnd",
+    "network": "macroscopic",
+    "rhs": "khatriRao(Ax, [N], F_NS_AS, [N_x_S, A_x_S]) * (( - kd_x .* F_NS_AS )'  * mu)"
+  },
+  "83": {
+    "lhs": "fV",
+    "network": "macroscopic",
+    "rhs": "( F * ( - kv_x )'  .* Ax .* F )'  * p"
+  },
+  "86": {
+    "lhs": "k_granulate",
+    "network": "materialDB >>> solid",
+    "rhs": "k_granulate"
+  },
+  "87": {
+    "lhs": "pN",
+    "network": "solid",
+    "rhs": "k_granulate .* r"
+  },
+  "89": {
+    "lhs": "dN",
+    "network": "solid",
+    "rhs": "ParDiff(pN,r)"
+  },
+  "90": {
+    "lhs": "A",
+    "network": "physical",
+    "rhs": "U - T .* S"
+  },
+  "91": {
+    "lhs": "G",
+    "network": "physical",
+    "rhs": "U + p .* V - T .* S"
+  },
+  "92": {
+    "lhs": "mu",
+    "network": "physical",
+    "rhs": "ParDiff(G,n)"
+  },
+  "93": {
+    "lhs": "alpha",
+    "network": "mixing",
+    "rhs": "a .* sin(t .* f)"
+  },
+  "94": {
+    "lhs": "one",
+    "network": "root",
+    "rhs": "Instantiate(value, -)"
+  },
+  "95": {
+    "lhs": "y_one",
+    "network": "mixing",
+    "rhs": "Instantiate(y, -)"
+  },
+  "96": {
+    "lhs": "dy",
+    "network": "mixing",
+    "rhs": "alpha .* (gamma .* y - beta .* (y - y_one))"
+  },
+  "97": {
+    "lhs": "dndt",
+    "network": "macroscopic",
+    "rhs": "Instantiate(dndt, zero)"
+  }
+}

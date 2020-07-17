@@ -1,0 +1,257 @@
+{
+  "1": {
+    "lhs": "half",
+    "network": "root",
+    "rhs": "np.ones(np.shape(value)), -"
+  },
+  "2": {
+    "lhs": "zero",
+    "network": "root",
+    "rhs": "np.ones(np.shape(value)), -"
+  },
+  "3": {
+    "lhs": "dt",
+    "network": "root",
+    "rhs": "diffSpace(t)"
+  },
+  "4": {
+    "lhs": "T",
+    "network": "physical",
+    "rhs": "ParDiff(U, S)"
+  },
+  "5": {
+    "lhs": "p",
+    "network": "physical",
+    "rhs": "np.negative(ParDiff(U, V))"
+  },
+  "7": {
+    "lhs": "H",
+    "network": "physical",
+    "rhs": "np.add(U, np.multiply(p, V))"
+  },
+  "8": {
+    "lhs": "vx",
+    "network": "physical",
+    "rhs": "ParDiff(rx, t)"
+  },
+  "10": {
+    "lhs": "Ax",
+    "network": "physical",
+    "rhs": "np.multiply(ry, rz)"
+  },
+  "14": {
+    "lhs": "cp",
+    "network": "materialDB",
+    "rhs": "ParDiff(H, T)"
+  },
+  "18": {
+    "lhs": "mu",
+    "network": "physical",
+    "rhs": "ParDiff(U, n)"
+  },
+  "31": {
+    "lhs": "kq_x",
+    "network": "materialDB",
+    "rhs": "np.dot(np.transpose(np.negative(P_N_A_dt)), (np.multiply(np.multiply(np.reciprocal(V), ParDiff(U, T)), vx)))"
+  },
+  "32": {
+    "lhs": "kq_x",
+    "network": "materialDB >>> liquid",
+    "rhs": "kq_x"
+  },
+  "39": {
+    "lhs": "fq",
+    "network": "macroscopic",
+    "rhs": "np.dot(F, (np.dot(np.transpose(np.multiply(np.multiply(np.negative(kq_x), np.transpose(Ax)), F)), T)))"
+  },
+  "41": {
+    "lhs": "n0",
+    "network": "macroscopic",
+    "rhs": "np.ones(np.shape(n)), -"
+  },
+  "42": {
+    "lhs": "c",
+    "network": "macroscopic",
+    "rhs": "khatriRao(np.reciprocal(V), [N], n, [N_x_S])"
+  },
+  "43": {
+    "lhs": "c_KS",
+    "network": "macroscopic",
+    "rhs": "np.dot(np.transpose(P_NS_KS), c)"
+  },
+  "44": {
+    "lhs": "N_NS_NK",
+    "network": "macroscopic",
+    "rhs": "np.dot(np.transpose(np.transpose(np.dot(P_NS_KS, np.transpose(N_KS_K)))), P_K_NK)"
+  },
+  "45": {
+    "lhs": "T_NK",
+    "network": "macroscopic",
+    "rhs": "np.dot(np.transpose(P_N_NK), T)"
+  },
+  "46": {
+    "lhs": "K",
+    "network": "macroscopic",
+    "rhs": "khatriRao(Ko, [K, dt], np.exp(khatriRao(ka, [K], np.reciprocal(np.multiply(R, T_NK)), [N_x_K])), [N_x_K])"
+  },
+  "47": {
+    "lhs": "c_KS_o",
+    "network": "macroscopic",
+    "rhs": "np.ones(np.shape(c_KS)), -"
+  },
+  "49": {
+    "lhs": "x_KS",
+    "network": "macroscopic",
+    "rhs": "np.multiply(np.reciprocal(c_KS_o), c_KS)"
+  },
+  "52": {
+    "lhs": "phi",
+    "network": "macroscopic",
+    "rhs": "np.dot(P_NK_KS, (Product( np.power(x_KS, N_KS_K) \\, N_KS_K )))"
+  },
+  "53": {
+    "lhs": "xi",
+    "network": "macroscopic",
+    "rhs": "np.multiply(K, phi)"
+  },
+  "54": {
+    "lhs": "pn",
+    "network": "macroscopic",
+    "rhs": "khatriRao(V, [N], (np.dot(N_NS_NK, xi)), [N_x_S, dt])"
+  },
+  "57": {
+    "lhs": "dir",
+    "network": "macroscopic",
+    "rhs": "np.sign(np.dot(np.transpose(F), p))"
+  },
+  "58": {
+    "lhs": "S_NS_AS",
+    "network": "macroscopic",
+    "rhs": "np.multiply(half, (np.subtract(F_NS_AS, khatriRao(dir, [A], np.abs(F_NS_AS ), [N_x_S, A_x_S]))))"
+  },
+  "59": {
+    "lhs": "c_AS",
+    "network": "macroscopic",
+    "rhs": "np.dot(np.transpose(S_NS_AS), c)"
+  },
+  "60": {
+    "lhs": "fnv",
+    "network": "macroscopic",
+    "rhs": "np.dot(F_NS_AS, (khatriRao(fV, [A, dt], c_AS, [A_x_S])))"
+  },
+  "62": {
+    "lhs": "dndt",
+    "network": "macroscopic",
+    "rhs": "np.add(np.add(fnv, fnd), pn)"
+  },
+  "63": {
+    "lhs": "to",
+    "network": "root",
+    "rhs": "np.ones(np.shape(t)), -"
+  },
+  "64": {
+    "lhs": "te",
+    "network": "root",
+    "rhs": "np.ones(np.shape(t)), -"
+  },
+  "65": {
+    "lhs": "n",
+    "network": "macroscopic",
+    "rhs": "np.add(Integral(dndt,t,to,te), n0)"
+  },
+  "71": {
+    "lhs": "rho",
+    "network": "materialDB",
+    "rhs": "np.multiply(m, np.reciprocal(V))"
+  },
+  "76": {
+    "lhs": "kc_x",
+    "network": "materialDB",
+    "rhs": "np.multiply(np.multiply(np.multiply(np.dot(np.transpose(np.negative(P_N_A_dt)), (blockReduce(mm, S, N_x_S, np.reciprocal(mu)))), np.transpose(np.reciprocal(V))), ParDiff(U, p)), vx)"
+  },
+  "78": {
+    "lhs": "kv_x",
+    "network": "materialDB",
+    "rhs": "np.multiply(np.reciprocal(rho), kc_x)"
+  },
+  "79": {
+    "lhs": "kv_x",
+    "network": "materialDB >>> liquid",
+    "rhs": "kv_x"
+  },
+  "80": {
+    "lhs": "kd_x",
+    "network": "materialDB >>> liquid",
+    "rhs": "kd_x"
+  },
+  "81": {
+    "lhs": "kd_x",
+    "network": "materialDB",
+    "rhs": "np.multiply(np.dot(np.transpose(np.negative(P_NS_AS_dt)), (khatriRao(np.multiply(vx, np.reciprocal(V)), [N], np.reciprocal(mu), [N_x_S]))), np.transpose(ParDiff(U, mu)))"
+  },
+  "82": {
+    "lhs": "fnd",
+    "network": "macroscopic",
+    "rhs": "np.dot(khatriRao(Ax, [N], F_NS_AS, [N_x_S, A_x_S]), (np.dot(np.transpose(np.multiply(np.negative(kd_x), F_NS_AS)), mu)))"
+  },
+  "83": {
+    "lhs": "fV",
+    "network": "macroscopic",
+    "rhs": "np.dot(np.transpose(np.multiply(np.multiply(np.dot(F, np.transpose(np.negative(kv_x))), Ax), F)), p)"
+  },
+  "86": {
+    "lhs": "k_granulate",
+    "network": "materialDB >>> solid",
+    "rhs": "k_granulate"
+  },
+  "87": {
+    "lhs": "pN",
+    "network": "solid",
+    "rhs": "np.multiply(k_granulate, r)"
+  },
+  "89": {
+    "lhs": "dN",
+    "network": "solid",
+    "rhs": "ParDiff(pN, r)"
+  },
+  "90": {
+    "lhs": "A",
+    "network": "physical",
+    "rhs": "np.subtract(U, np.multiply(T, S))"
+  },
+  "91": {
+    "lhs": "G",
+    "network": "physical",
+    "rhs": "np.subtract(np.add(U, np.multiply(p, V)), np.multiply(T, S))"
+  },
+  "92": {
+    "lhs": "mu",
+    "network": "physical",
+    "rhs": "ParDiff(G, n)"
+  },
+  "93": {
+    "lhs": "alpha",
+    "network": "mixing",
+    "rhs": "np.multiply(a, np.sin(np.multiply(t, f)))"
+  },
+  "94": {
+    "lhs": "one",
+    "network": "root",
+    "rhs": "np.ones(np.shape(value)), -"
+  },
+  "95": {
+    "lhs": "y_one",
+    "network": "mixing",
+    "rhs": "np.ones(np.shape(y)), -"
+  },
+  "96": {
+    "lhs": "dy",
+    "network": "mixing",
+    "rhs": "np.multiply(alpha, (np.subtract(np.multiply(gamma, y), np.multiply(beta, (np.subtract(y, y_one))))))"
+  },
+  "97": {
+    "lhs": "dndt",
+    "network": "macroscopic",
+    "rhs": "np.ones(np.shape(dndt)), zero"
+  }
+}

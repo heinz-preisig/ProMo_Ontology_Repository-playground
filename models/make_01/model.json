@@ -1,0 +1,151 @@
+{
+  "ID_tree": {
+    "0": {
+      "ancestors": [],
+      "children": [
+        1,
+        2
+      ]
+    },
+    "1": {
+      "ancestors": [
+        0
+      ],
+      "children": []
+    },
+    "2": {
+      "ancestors": [
+        0
+      ],
+      "children": []
+    }
+  },
+  "named_networks": {
+    "control": [
+      "control"
+    ],
+    "gas": [
+      "gas"
+    ],
+    "liquid": [
+      "liquid"
+    ],
+    "materialDB": [
+      "materialDB"
+    ],
+    "mixing": [
+      "mixing"
+    ],
+    "solid": [
+      "solid"
+    ]
+  },
+  "nodes": {
+    "0": {
+      "name": 0,
+      "network": null,
+      "named_network": null,
+      "class": "node_composite",
+      "type": "node_composite",
+      "tokens": {}
+    },
+    "1": {
+      "name": "default",
+      "network": "solid",
+      "named_network": "solid",
+      "class": "node_simple",
+      "type": "constant",
+      "tokens": {
+        "energy": []
+      },
+      "injected_typed_tokens": {}
+    },
+    "2": {
+      "name": "default",
+      "network": "solid",
+      "named_network": "solid",
+      "class": "node_simple",
+      "type": "constant",
+      "tokens": {
+        "energy": []
+      },
+      "injected_typed_tokens": {}
+    }
+  },
+  "domains": {},
+  "arcs": {
+    "0": {
+      "name": "1 | 2",
+      "source": 1,
+      "sink": 2,
+      "token": "energy",
+      "typed_tokens": [],
+      "network": "solid",
+      "named_network": "solid",
+      "mechanism": "conduction",
+      "nature": "lumped"
+    }
+  },
+  "scenes": {
+    "0": {
+      "nodes": {
+        "1": {
+          "position_x": -165.0,
+          "position_y": -143.0,
+          "root": {
+            "position_x": 0,
+            "position_y": 0
+          },
+          "name": {
+            "position_x": 0,
+            "position_y": 50
+          },
+          "network": {
+            "position_x": 0,
+            "position_y": 0
+          }
+        },
+        "2": {
+          "position_x": 135,
+          "position_y": -110,
+          "root": {
+            "position_x": 0,
+            "position_y": 0
+          },
+          "name": {
+            "position_x": 0,
+            "position_y": 50
+          },
+          "network": {
+            "position_x": 0,
+            "position_y": 0
+          }
+        }
+      },
+      "arcs": {
+        "0": [
+          [
+            -105,
+            -5
+          ],
+          [
+            45,
+            -5
+          ]
+        ]
+      }
+    },
+    "1": {
+      "nodes": {},
+      "arcs": {
+        "0": []
+      }
+    },
+    "2": {
+      "nodes": {},
+      "arcs": {
+        "0": []
+      }
+    }
+  }
+}

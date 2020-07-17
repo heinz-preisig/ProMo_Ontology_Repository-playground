@@ -1,0 +1,257 @@
+{
+  "1": {
+    "lhs": "half",
+    "network": "root",
+    "rhs": " O_11 D_0 V_5 D_7- D_1"
+  },
+  "2": {
+    "lhs": "zero",
+    "network": "root",
+    "rhs": " O_11 D_0 V_5 D_7- D_1"
+  },
+  "3": {
+    "lhs": "dt",
+    "network": "root",
+    "rhs": " F_12 D_0 V_1 D_1"
+  },
+  "4": {
+    "lhs": "T",
+    "network": "physical",
+    "rhs": " O_7 D_0 V_11 D_7 V_12 D_1"
+  },
+  "5": {
+    "lhs": "p",
+    "network": "physical",
+    "rhs": " F_11 D_0 O_7 D_0 V_11 D_7 V_13 D_1 D_1"
+  },
+  "7": {
+    "lhs": "H",
+    "network": "physical",
+    "rhs": " V_11 O_0 V_15 O_4 V_13"
+  },
+  "8": {
+    "lhs": "vx",
+    "network": "physical",
+    "rhs": " O_7 D_0 V_9 D_7 V_1 D_1"
+  },
+  "10": {
+    "lhs": "Ax",
+    "network": "physical",
+    "rhs": " V_20 O_4 V_21"
+  },
+  "14": {
+    "lhs": "cp",
+    "network": "materialDB",
+    "rhs": " O_7 D_0 V_17 D_7 V_14 D_1"
+  },
+  "18": {
+    "lhs": "mu",
+    "network": "physical",
+    "rhs": " O_7 D_0 V_11 D_7 V_10 D_1"
+  },
+  "31": {
+    "lhs": "kq_x",
+    "network": "materialDB",
+    "rhs": " F_11 D_0 V_41 D_1  O_5  I_1 O_5  D_0 F_15 D_0 V_13 D_1 O_4 O_7 D_0 V_11 D_7 V_14 D_1 O_4 V_18 D_1"
+  },
+  "32": {
+    "lhs": "kq_x",
+    "network": "materialDB >>> liquid",
+    "rhs": " V_45"
+  },
+  "39": {
+    "lhs": "fq",
+    "network": "macroscopic",
+    "rhs": " V_2  O_5  I_2 O_5  D_0 F_11 D_0 V_46 D_1 O_4 V_22 O_4 V_2  O_5  I_1 O_5  V_14 D_1"
+  },
+  "41": {
+    "lhs": "n0",
+    "network": "macroscopic",
+    "rhs": " O_11 D_0 V_10 D_7- D_1"
+  },
+  "42": {
+    "lhs": "c",
+    "network": "macroscopic",
+    "rhs": " F_15 D_0 V_13 D_1 O_3 V_10"
+  },
+  "43": {
+    "lhs": "c_KS",
+    "network": "macroscopic",
+    "rhs": " V_57  O_5  I_5 O_5  V_60"
+  },
+  "44": {
+    "lhs": "N_NS_NK",
+    "network": "macroscopic",
+    "rhs": " V_57  O_5  I_8 O_5  V_62  O_5  I_4 O_5  V_58"
+  },
+  "45": {
+    "lhs": "T_NK",
+    "network": "macroscopic",
+    "rhs": " V_59  O_5  I_1 O_5  V_14"
+  },
+  "46": {
+    "lhs": "K",
+    "network": "macroscopic",
+    "rhs": " V_64 O_3 F_0 D_0 V_65 O_3 F_15 D_0 V_66 O_4 V_67 D_1 D_1"
+  },
+  "47": {
+    "lhs": "c_KS_o",
+    "network": "macroscopic",
+    "rhs": " O_11 D_0 V_61 D_7- D_1"
+  },
+  "49": {
+    "lhs": "x_KS",
+    "network": "macroscopic",
+    "rhs": " F_15 D_0 V_69 D_1 O_4 V_61"
+  },
+  "52": {
+    "lhs": "phi",
+    "network": "macroscopic",
+    "rhs": " V_74  O_5  I_8 O_5  D_0 O_10 D_0 V_71 O_2 D_0 V_62 D_1 D_7 V_62 D_1 D_1"
+  },
+  "53": {
+    "lhs": "xi",
+    "network": "macroscopic",
+    "rhs": " V_68 O_4 V_75"
+  },
+  "54": {
+    "lhs": "pn",
+    "network": "macroscopic",
+    "rhs": " V_13 O_3 D_0 V_63  O_5  I_7 O_5  V_76 D_1"
+  },
+  "57": {
+    "lhs": "dir",
+    "network": "macroscopic",
+    "rhs": " F_16 D_0 V_2  O_5  I_1 O_5  V_15 D_1"
+  },
+  "58": {
+    "lhs": "S_NS_AS",
+    "network": "macroscopic",
+    "rhs": " V_6 O_4 D_0 V_30 O_1 V_82 O_3 F_10 D_0 V_30 D_1 D_1"
+  },
+  "59": {
+    "lhs": "c_AS",
+    "network": "macroscopic",
+    "rhs": " V_83  O_5  I_5 O_5  V_60"
+  },
+  "60": {
+    "lhs": "fnv",
+    "network": "macroscopic",
+    "rhs": " V_30  O_5  I_6 O_5  D_0 V_81 O_3 V_84 D_1"
+  },
+  "62": {
+    "lhs": "dndt",
+    "network": "macroscopic",
+    "rhs": " V_85 O_0 V_86 O_0 V_77"
+  },
+  "63": {
+    "lhs": "to",
+    "network": "root",
+    "rhs": " O_11 D_0 V_1 D_7- D_1"
+  },
+  "64": {
+    "lhs": "te",
+    "network": "root",
+    "rhs": " O_11 D_0 V_1 D_7- D_1"
+  },
+  "65": {
+    "lhs": "n",
+    "network": "macroscopic",
+    "rhs": " O_9 D_0 V_87 D_8 V_1 O_14 D_2 V_88 D_7 V_89 D_3 D_1 O_0 V_56"
+  },
+  "71": {
+    "lhs": "rho",
+    "network": "materialDB",
+    "rhs": " V_92 O_4 F_15 D_0 V_13 D_1"
+  },
+  "76": {
+    "lhs": "kc_x",
+    "network": "materialDB",
+    "rhs": " F_11 D_0 V_41 D_1  O_5  I_1 O_5  D_0 V_94 O_5 I_3 O_14 I_5 O_5 F_15 D_0 V_31 D_1 D_1 O_4 F_15 D_0 V_13 D_1 O_4 O_7 D_0 V_11 D_7 V_15 D_1 O_4 V_18"
+  },
+  "78": {
+    "lhs": "kv_x",
+    "network": "materialDB",
+    "rhs": " F_15 D_0 V_96 D_1 O_4 V_95"
+  },
+  "79": {
+    "lhs": "kv_x",
+    "network": "materialDB >>> liquid",
+    "rhs": " V_98"
+  },
+  "80": {
+    "lhs": "kd_x",
+    "network": "materialDB >>> liquid",
+    "rhs": " V_93"
+  },
+  "81": {
+    "lhs": "kd_x",
+    "network": "materialDB",
+    "rhs": " F_11 D_0 V_49 D_1  O_5  I_5 O_5  D_0 V_18 O_4 F_15 D_0 V_13 D_1 O_3 F_15 D_0 V_31 D_1 D_1 O_4 O_7 D_0 V_11 D_7 V_31 D_1"
+  },
+  "82": {
+    "lhs": "fnd",
+    "network": "macroscopic",
+    "rhs": " V_22 O_3 V_30  O_5  I_6 O_5  D_0 F_11 D_0 V_100 D_1 O_4 V_30  O_5  I_5 O_5  V_31 D_1"
+  },
+  "83": {
+    "lhs": "fV",
+    "network": "macroscopic",
+    "rhs": " V_2  O_5  I_2 O_5  F_11 D_0 V_99 D_1 O_4 V_22 O_4 V_2  O_5  I_1 O_5  V_15"
+  },
+  "86": {
+    "lhs": "k_granulate",
+    "network": "materialDB >>> solid",
+    "rhs": " V_106"
+  },
+  "87": {
+    "lhs": "pN",
+    "network": "solid",
+    "rhs": " V_107 O_4 V_104"
+  },
+  "89": {
+    "lhs": "dN",
+    "network": "solid",
+    "rhs": " O_7 D_0 V_108 D_7 V_104 D_1"
+  },
+  "90": {
+    "lhs": "A",
+    "network": "physical",
+    "rhs": " V_11 O_1 V_14 O_4 V_12"
+  },
+  "91": {
+    "lhs": "G",
+    "network": "physical",
+    "rhs": " V_11 O_0 V_15 O_4 V_13 O_1 V_14 O_4 V_12"
+  },
+  "92": {
+    "lhs": "mu",
+    "network": "physical",
+    "rhs": " O_7 D_0 V_112 D_7 V_10 D_1"
+  },
+  "93": {
+    "lhs": "alpha",
+    "network": "mixing",
+    "rhs": " V_117 O_4 F_4 D_0 V_1 O_4 V_116 D_1"
+  },
+  "94": {
+    "lhs": "one",
+    "network": "root",
+    "rhs": " O_11 D_0 V_5 D_7- D_1"
+  },
+  "95": {
+    "lhs": "y_one",
+    "network": "mixing",
+    "rhs": " O_11 D_0 V_113 D_7- D_1"
+  },
+  "96": {
+    "lhs": "dy",
+    "network": "mixing",
+    "rhs": " V_118 O_4 D_0 V_115 O_4 V_113 O_1 V_114 O_4 D_0 V_113 O_1 V_121 D_1 D_1"
+  },
+  "97": {
+    "lhs": "dndt",
+    "network": "macroscopic",
+    "rhs": " O_11 D_0 V_87 D_7 V_7 D_1"
+  }
+}

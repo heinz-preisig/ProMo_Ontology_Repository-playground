@@ -1,0 +1,638 @@
+{
+  "equation_assignment": {
+    "arc": {},
+    "interface": {},
+    "node": {}
+  },
+  "interfaces": {},
+  "ontology_tree": {
+    "control": {
+      "behaviour": {
+        "arc": [
+          "dataFlow"
+        ],
+        "graph": [
+          "network",
+          "projection"
+        ],
+        "node": [
+          "frame",
+          "state",
+          "constant",
+          "*diffState",
+          "*diffFrame"
+        ]
+      },
+      "children": [],
+      "name": "control",
+      "parents": [
+        "root"
+      ],
+      "structure": {
+        "arc": {
+          "signal": {
+            "link": [
+              "unidirectional"
+            ]
+          }
+        },
+        "node": {
+          "constant": [
+            "infinity"
+          ],
+          "dynamic": [
+            "lumped"
+          ],
+          "event": [
+            "lumped"
+          ]
+        },
+        "token": {
+          "signal": []
+        }
+      },
+      "type": "inter"
+    },
+    "fluid": {
+      "behaviour": {
+        "arc": [
+          "transport"
+        ],
+        "graph": [
+          "network",
+          "projection"
+        ],
+        "node": [
+          "frame",
+          "state",
+          "constant",
+          "*diffState",
+          "*diffFrame",
+          "conversion",
+          "secondaryState",
+          "effort"
+        ]
+      },
+      "children": [
+        "liquid",
+        "gas"
+      ],
+      "name": "fluid",
+      "parents": [
+        "macroscopic",
+        "physical",
+        "root"
+      ],
+      "structure": {
+        "arc": {
+          "energy": {
+            "conduction": [
+              "lumped"
+            ],
+            "work": [
+              "lumped"
+            ]
+          },
+          "mass": {
+            "convection": [
+              "lumped"
+            ],
+            "diffusion": [
+              "lumped"
+            ]
+          }
+        },
+        "node": {
+          "constant": [
+            "infinity"
+          ],
+          "dynamic": [
+            "lumped"
+          ],
+          "event": [
+            "lumped",
+            "distributed"
+          ]
+        },
+        "token": {
+          "energy": [],
+          "mass": [
+            "species"
+          ]
+        }
+      },
+      "type": "intra"
+    },
+    "gas": {
+      "behaviour": {
+        "arc": [
+          "transport"
+        ],
+        "graph": [
+          "network",
+          "projection"
+        ],
+        "node": [
+          "frame",
+          "state",
+          "constant",
+          "*diffState",
+          "*diffFrame",
+          "conversion",
+          "secondaryState",
+          "effort"
+        ]
+      },
+      "children": [],
+      "name": "gas",
+      "parents": [
+        "fluid",
+        "macroscopic",
+        "physical",
+        "root"
+      ],
+      "structure": {
+        "arc": {
+          "energy": {
+            "conduction": [
+              "lumped"
+            ],
+            "work": [
+              "lumped"
+            ]
+          },
+          "mass": {
+            "convection": [
+              "lumped"
+            ],
+            "diffusion": [
+              "lumped"
+            ]
+          }
+        },
+        "node": {
+          "constant": [
+            "infinity"
+          ],
+          "dynamic": [
+            "lumped"
+          ],
+          "event": [
+            "lumped",
+            "distributed"
+          ]
+        },
+        "token": {
+          "energy": [],
+          "mass": [
+            "species"
+          ]
+        }
+      },
+      "type": "intra"
+    },
+    "liquid": {
+      "behaviour": {
+        "arc": [
+          "transport"
+        ],
+        "graph": [
+          "network",
+          "projection"
+        ],
+        "node": [
+          "frame",
+          "state",
+          "constant",
+          "*diffState",
+          "*diffFrame",
+          "conversion",
+          "secondaryState",
+          "effort"
+        ]
+      },
+      "children": [],
+      "name": "liquid",
+      "parents": [
+        "fluid",
+        "macroscopic",
+        "physical",
+        "root"
+      ],
+      "structure": {
+        "arc": {
+          "energy": {
+            "conduction": [
+              "lumped"
+            ],
+            "work": [
+              "lumped"
+            ]
+          },
+          "mass": {
+            "convection": [
+              "lumped"
+            ],
+            "diffusion": [
+              "lumped"
+            ]
+          }
+        },
+        "node": {
+          "constant": [
+            "infinity"
+          ],
+          "dynamic": [
+            "lumped"
+          ],
+          "event": [
+            "lumped",
+            "distributed"
+          ]
+        },
+        "token": {
+          "energy": [],
+          "mass": [
+            "species"
+          ]
+        }
+      },
+      "type": "intra"
+    },
+    "macroscopic": {
+      "behaviour": {
+        "arc": [
+          "transport"
+        ],
+        "graph": [
+          "network",
+          "projection"
+        ],
+        "node": [
+          "frame",
+          "state",
+          "constant",
+          "*diffState",
+          "*diffFrame",
+          "conversion",
+          "secondaryState",
+          "effort"
+        ]
+      },
+      "children": [
+        "fluid",
+        "solid"
+      ],
+      "name": "macroscopic",
+      "parents": [
+        "physical",
+        "root"
+      ],
+      "structure": {
+        "arc": {
+          "energy": {
+            "conduction": [
+              "lumped"
+            ],
+            "work": [
+              "lumped"
+            ]
+          },
+          "mass": {
+            "convection": [
+              "lumped"
+            ],
+            "diffusion": [
+              "lumped"
+            ]
+          }
+        },
+        "node": {
+          "constant": [
+            "infinity"
+          ],
+          "dynamic": [
+            "lumped"
+          ],
+          "event": [
+            "lumped",
+            "distributed"
+          ]
+        },
+        "token": {
+          "energy": [],
+          "mass": [
+            "species"
+          ]
+        }
+      },
+      "type": "inter"
+    },
+    "materialDB": {
+      "behaviour": {
+        "arc": [],
+        "graph": [
+          "network",
+          "projection"
+        ],
+        "node": [
+          "frame",
+          "state",
+          "constant",
+          "*diffState",
+          "*diffFrame",
+          "secondaryState",
+          "effort",
+          "property"
+        ]
+      },
+      "children": [],
+      "name": "materialDB",
+      "parents": [
+        "physical",
+        "root"
+      ],
+      "structure": {
+        "arc": {
+          "energy": {
+            "conduction": [
+              "lumped"
+            ],
+            "work": [
+              "lumped"
+            ]
+          },
+          "mass": {
+            "convection": [
+              "lumped"
+            ],
+            "diffusion": [
+              "lumped"
+            ]
+          }
+        },
+        "node": {
+          "constant": [
+            "infinity"
+          ],
+          "dynamic": [
+            "lumped"
+          ],
+          "event": [
+            "lumped"
+          ]
+        },
+        "token": {
+          "energy": [],
+          "mass": [
+            "species"
+          ]
+        }
+      },
+      "type": "inter"
+    },
+    "mixing": {
+      "behaviour": {
+        "arc": [],
+        "graph": [
+          "network",
+          "projection"
+        ],
+        "node": [
+          "frame",
+          "state",
+          "constant",
+          "*diffState",
+          "*diffFrame",
+          "secondaryState",
+          "effort",
+          "parameter"
+        ]
+      },
+      "children": [],
+      "name": "mixing",
+      "parents": [
+        "physical",
+        "root"
+      ],
+      "structure": {
+        "arc": {
+          "energy": {
+            "conduction": [
+              "lumped"
+            ],
+            "work": [
+              "lumped"
+            ]
+          },
+          "mass": {
+            "convection": [
+              "lumped"
+            ],
+            "diffusion": [
+              "lumped"
+            ]
+          },
+          "mixCoeff": {}
+        },
+        "node": {
+          "constant": [
+            "infinity"
+          ],
+          "dynamic": [
+            "lumped"
+          ],
+          "event": [
+            "lumped"
+          ]
+        },
+        "token": {
+          "energy": [],
+          "mass": [
+            "species"
+          ],
+          "mixCoeff": []
+        }
+      },
+      "type": "inter"
+    },
+    "physical": {
+      "behaviour": {
+        "arc": [],
+        "graph": [
+          "network",
+          "projection"
+        ],
+        "node": [
+          "frame",
+          "state",
+          "constant",
+          "*diffState",
+          "*diffFrame",
+          "secondaryState",
+          "effort"
+        ]
+      },
+      "children": [
+        "macroscopic",
+        "materialDB",
+        "mixing"
+      ],
+      "name": "physical",
+      "parents": [
+        "root"
+      ],
+      "structure": {
+        "arc": {
+          "energy": {
+            "conduction": [
+              "lumped"
+            ],
+            "work": [
+              "lumped"
+            ]
+          },
+          "mass": {
+            "convection": [
+              "lumped"
+            ],
+            "diffusion": [
+              "lumped"
+            ]
+          }
+        },
+        "node": {
+          "constant": [
+            "infinity"
+          ],
+          "dynamic": [
+            "lumped"
+          ],
+          "event": [
+            "lumped"
+          ]
+        },
+        "token": {
+          "energy": [],
+          "mass": [
+            "species"
+          ]
+        }
+      },
+      "type": "inter"
+    },
+    "root": {
+      "behaviour": {
+        "arc": [],
+        "graph": [
+          "network",
+          "projection"
+        ],
+        "node": [
+          "frame",
+          "state",
+          "constant",
+          "*diffState",
+          "*diffFrame"
+        ]
+      },
+      "children": [
+        "physical",
+        "control"
+      ],
+      "name": "root",
+      "parents": [],
+      "structure": {
+        "arc": {},
+        "node": {
+          "constant": [
+            "infinity"
+          ],
+          "dynamic": [
+            "lumped"
+          ],
+          "event": [
+            "lumped"
+          ]
+        },
+        "token": {}
+      },
+      "type": "inter"
+    },
+    "solid": {
+      "behaviour": {
+        "arc": [
+          "transport"
+        ],
+        "graph": [
+          "network",
+          "projection"
+        ],
+        "node": [
+          "frame",
+          "state",
+          "constant",
+          "*diffState",
+          "*diffFrame",
+          "conversion",
+          "secondaryState",
+          "effort"
+        ]
+      },
+      "children": [],
+      "name": "solid",
+      "parents": [
+        "macroscopic",
+        "physical",
+        "root"
+      ],
+      "structure": {
+        "arc": {
+          "energy": {
+            "conduction": [
+              "lumped"
+            ],
+            "work": [
+              "lumped"
+            ]
+          },
+          "mass": {
+            "convection": [
+              "lumped"
+            ],
+            "diffusion": [
+              "lumped"
+            ]
+          }
+        },
+        "node": {
+          "constant": [
+            "infinity"
+          ],
+          "dynamic": [
+            "lumped"
+          ],
+          "event": [
+            "lumped",
+            "distributed"
+          ]
+        },
+        "token": {
+          "energy": [],
+          "mass": [
+            "species"
+          ]
+        }
+      },
+      "type": "intra"
+    }
+  },
+  "rules": {
+    "variable_classes_having_port_variables": [
+      "constant",
+      "frame",
+      "state"
+    ]
+  },
+  "version": "3"
+}

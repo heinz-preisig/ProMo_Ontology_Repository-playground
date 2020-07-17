@@ -1,0 +1,220 @@
+
+
+%\newenvironment{eq}{\begin{minipage}{10cm}$}{$\end{minipage} }
+%\newenvironment{lay}{\catcode`\_=12}{\catcode`\_=8}
+\renewcommand{\arraystretch}{2}
+
+\begin{longtable}{|p{0.5cm}|p{12cm}|p{6cm}|p{6cm}|}\hline
+no & equation &documentation &layer \\\hline\hline
+\endhead
+\hline \multicolumn{4}{r}{\textit{Continued on next page}} \\
+\endfoot
+\hline
+\endlastfoot
+
+\hyperlink{"v:6"}{ 1 }\hypertarget{"e:1"}{  } &
+    \begin{eq}{1 \backslash 2}_{} := Set({\#}_{}, -)\end{eq} &
+    \begin{lay}one half\end{lay} &
+    \begin{lay}root\end{lay} \\
+\hyperlink{"v:7"}{ 2 }\hypertarget{"e:2"}{  } &
+    \begin{eq}{0}_{} := Set({\#}_{}, -)\end{eq} &
+    \begin{lay}zero\end{lay} &
+    \begin{lay}root\end{lay} \\
+\hyperlink{"v:8"}{ 3 }\hypertarget{"e:3"}{  } &
+    \begin{eq}{\partial{t}}_{N, dt} := diffSpace({t}_{N})\end{eq} &
+    \begin{lay}differential time\end{lay} &
+    \begin{lay}root\end{lay} \\
+\hyperlink{"v:14"}{ 4 }\hypertarget{"e:4"}{  } &
+    \begin{eq}{T}_{N} := \ParDiff{{U}_{N}}{{S}_{N}}\end{eq} &
+    \begin{lay}definition of temperature\end{lay} &
+    \begin{lay}physical\end{lay} \\
+\hyperlink{"v:15"}{ 5 }\hypertarget{"e:5"}{  } &
+    \begin{eq}{p}_{N} := \left( -\ParDiff{{U}_{N}}{{V}_{N}} \right)\end{eq} &
+    \begin{lay}definition of pressure\end{lay} &
+    \begin{lay}physical\end{lay} \\
+\hyperlink{"v:17"}{ 7 }\hypertarget{"e:7"}{  } &
+    \begin{eq}{H}_{N} := {U}_{N}  + {p}_{N} \, . \, {V}_{N}\end{eq} &
+    \begin{lay}definition of enthalpy\end{lay} &
+    \begin{lay}physical\end{lay} \\
+\hyperlink{"v:18"}{ 8 }\hypertarget{"e:8"}{  } &
+    \begin{eq}{v_{x}}_{N} := \ParDiff{{r_{x}}_{N}}{{t}_{N}}\end{eq} &
+    \begin{lay}definition of velocity in x direction\end{lay} &
+    \begin{lay}physical\end{lay} \\
+\hyperlink{"v:22"}{ 10 }\hypertarget{"e:10"}{  } &
+    \begin{eq}{A_{x}}_{N} := {r_{y}}_{N} \, . \, {r_{z}}_{N}\end{eq} &
+    \begin{lay}area at location x\end{lay} &
+    \begin{lay}physical\end{lay} \\
+\hyperlink{"v:26"}{ 14 }\hypertarget{"e:14"}{  } &
+    \begin{eq}{c_{p}}_{N} := \ParDiff{{H}_{N}}{{T}_{N}}\end{eq} &
+    \begin{lay}heat capacity at constant pressure\end{lay} &
+    \begin{lay}materialDB\end{lay} \\
+\hyperlink{"v:31"}{ 18 }\hypertarget{"e:18"}{  } &
+    \begin{eq}{\mu}_{{N S}} := \ParDiff{{U}_{N}}{{n}_{{N S}}}\end{eq} &
+    \begin{lay}definition of chemical potential\end{lay} &
+    \begin{lay}physical\end{lay} \\
+\hyperlink{"v:45"}{ 31 }\hypertarget{"e:31"}{  } &
+    \begin{eq}{k^{q_x}}_{A, dt} := \left( -{P}_{N, A, dt} \right) \stackrel{N}{\,\star\,} \left(\left( {V}_{N} \right)^{-1} \, . \, \ParDiff{{U}_{N}}{{T}_{N}} \, . \, {v_{x}}_{N}\right)\end{eq} &
+    \begin{lay}heat transfer coefficient for an event-dynamic transfer system\end{lay} &
+    \begin{lay}materialDB\end{lay} \\
+\hyperlink{"v:46"}{ 32 }\hypertarget{"e:32"}{  } &
+    \begin{eq}{k^{q_x}}_{A, dt} := {k^{q_x}}_{A, dt}\end{eq} &
+    \begin{lay}link to get heat transfer coefficient\end{lay} &
+    \begin{lay}materialDB >>> liquid\end{lay} \\
+\hyperlink{"v:54"}{ 39 }\hypertarget{"e:39"}{  } &
+    \begin{eq}{\hat{q}}_{N, dt} := {F}_{N, A} \stackrel{A}{\,\star\,} \left(\left( -{k^{q_x}}_{A, dt} \right) \, . \, {A_{x}}_{N} \, . \, {F}_{N, A} \stackrel{N}{\,\star\,} {T}_{N}\right)\end{eq} &
+    \begin{lay}heat flow\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:56"}{ 41 }\hypertarget{"e:41"}{  } &
+    \begin{eq}{n^{0}}_{{N S}} := Set({n}_{{N S}}, -)\end{eq} &
+    \begin{lay}initial condition\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:60"}{ 42 }\hypertarget{"e:42"}{  } &
+    \begin{eq}{c}_{{N S}} := \left( {V}_{N} \right)^{-1} \, {\odot} \, {n}_{{N S}}\end{eq} &
+    \begin{lay}molar concentration\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:61"}{ 43 }\hypertarget{"e:43"}{  } &
+    \begin{eq}{c}_{{K S}} := {P}_{{N S}, {K S}} \stackrel{{N S}}{\,\star\,} {c}_{{N S}}\end{eq} &
+    \begin{lay}molar concentrations assigned to reaction K\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:63"}{ 44 }\hypertarget{"e:44"}{  } &
+    \begin{eq}{N}_{{N S}, {N K}} := {P}_{{N S}, {K S}} \stackrel{{K S}}{\,\star\,} {N}_{K, {K S}} \stackrel{K}{\,\star\,} {P}_{K, {N K}}\end{eq} &
+    \begin{lay}global stoichiomety block matrix\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:67"}{ 45 }\hypertarget{"e:45"}{  } &
+    \begin{eq}{T}_{{N K}} := {P}_{N, {N K}} \stackrel{N}{\,\star\,} {T}_{N}\end{eq} &
+    \begin{lay}temperature for reactions\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:68"}{ 46 }\hypertarget{"e:46"}{  } &
+    \begin{eq}{K}_{{N K}, dt} := {K^{o}}_{K, dt} \, {\odot} \, exp({E^{A}}_{K} \, {\odot} \, \left( {R}_{} \, . \, {T}_{{N K}} \right)^{-1})\end{eq} &
+    \begin{lay}reaction "constants"\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:69"}{ 47 }\hypertarget{"e:47"}{  } &
+    \begin{eq}{c^{o}}_{{K S}} := Set({c}_{{K S}}, -)\end{eq} &
+    \begin{lay}norming concentration -- probability must have no units !\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:71"}{ 49 }\hypertarget{"e:49"}{  } &
+    \begin{eq}{x}_{{K S}} := \left( {c^{o}}_{{K S}} \right)^{-1} \, . \, {c}_{{K S}}\end{eq} &
+    \begin{lay}normed concentration little like more fractions\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:75"}{ 52 }\hypertarget{"e:52"}{  } &
+    \begin{eq}{\phi}_{{N K}} := {P}_{{N K}, {K S}} \stackrel{{K S}}{\,\star\,} \left(\prod\left(  {x}_{{K S}}^{{N}_{K, {K S}}}   \right)\right)\end{eq} &
+    \begin{lay}probabiity for the reactions to occur\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:76"}{ 53 }\hypertarget{"e:53"}{  } &
+    \begin{eq}{\xi}_{{N K}, dt} := {K}_{{N K}, dt} \, . \, {\phi}_{{N K}}\end{eq} &
+    \begin{lay}dyamic extend of reaction\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:77"}{ 54 }\hypertarget{"e:54"}{  } &
+    \begin{eq}{\tilde{n}}_{{N S}, dt} := {V}_{N} \, {\odot} \, \left({N}_{{N S}, {N K}} \stackrel{{N K}}{\,\star\,} {\xi}_{{N K}, dt}\right)\end{eq} &
+    \begin{lay}production term\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:82"}{ 57 }\hypertarget{"e:57"}{  } &
+    \begin{eq}{d}_{A} := \text{sign} \left( {F}_{N, A} \stackrel{N}{\,\star\,} {p}_{N} \right)\end{eq} &
+    \begin{lay}direction of flow relative to reference coordinate\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:83"}{ 58 }\hypertarget{"e:58"}{  } &
+    \begin{eq}{S}_{{N S}, {A S}} := {1 \backslash 2}_{} \, . \, \left({F}_{{N S}, {A S}}  - {d}_{A} \, {\odot} \, |{F}_{{N S}, {A S}}|\right)\end{eq} &
+    \begin{lay}selection of the flow sources\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:84"}{ 59 }\hypertarget{"e:59"}{  } &
+    \begin{eq}{c}_{{A S}} := {S}_{{N S}, {A S}} \stackrel{{N S}}{\,\star\,} {c}_{{N S}}\end{eq} &
+    \begin{lay}concentration in the convective flows\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:85"}{ 60 }\hypertarget{"e:60"}{  } &
+    \begin{eq}{\hat{n}^{v}}_{{N S}, dt} := {F}_{{N S}, {A S}} \stackrel{{A S}}{\,\star\,} \left({\hat{V}}_{A, dt} \, {\odot} \, {c}_{{A S}}\right)\end{eq} &
+    \begin{lay}convective species flow\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:87"}{ 62 }\hypertarget{"e:62"}{  } &
+    \begin{eq}{dndt}_{{N S}, dt} := {\hat{n}^{v}}_{{N S}, dt}  + {\hat{n}^{d}}_{{N S}, dt}  + {\tilde{n}}_{{N S}, dt}\end{eq} &
+    \begin{lay}differential species balances\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:88"}{ 63 }\hypertarget{"e:63"}{  } &
+    \begin{eq}{to}_{N} := Set({t}_{N}, -)\end{eq} &
+    \begin{lay}initial time\end{lay} &
+    \begin{lay}root\end{lay} \\
+\hyperlink{"v:89"}{ 64 }\hypertarget{"e:64"}{  } &
+    \begin{eq}{te}_{N} := Set({t}_{N}, -)\end{eq} &
+    \begin{lay}end time\end{lay} &
+    \begin{lay}root\end{lay} \\
+\hyperlink{"v:10"}{ 65 }\hypertarget{"e:65"}{  } &
+    \begin{eq}{n}_{{N S}} := \int_{ {to}_{N} }^{ {te}_{N} } \, {dndt}_{{N S}, dt} \enskip d\,{t}_{N}  + {n^{0}}_{{N S}}\end{eq} &
+    \begin{lay}integration of differential species balances\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:96"}{ 71 }\hypertarget{"e:71"}{  } &
+    \begin{eq}{\rho}_{N} := {m}_{N} \, . \, \left( {V}_{N} \right)^{-1}\end{eq} &
+    \begin{lay}mass density\end{lay} &
+    \begin{lay}materialDB\end{lay} \\
+\hyperlink{"v:95"}{ 76 }\hypertarget{"e:76"}{  } &
+    \begin{eq}{k^{c_x}}_{N, A, dt} := \left( -{P}_{N, A, dt} \right) \stackrel{N}{\,\star\,} \left({\lambda}_{S} \stackrel{ S \, \in \, {N S} }{\,\star\,} \left( {\mu}_{{N S}} \right)^{-1}\right) \, . \, \left( {V}_{N} \right)^{-1} \, . \, \ParDiff{{U}_{N}}{{p}_{N}} \, . \, {v_{x}}_{N}\end{eq} &
+    \begin{lay}convective mass diffusivity per area\end{lay} &
+    \begin{lay}materialDB\end{lay} \\
+\hyperlink{"v:98"}{ 78 }\hypertarget{"e:78"}{  } &
+    \begin{eq}{k^{v_x}}_{N, A, dt} := \left( {\rho}_{N} \right)^{-1} \, . \, {k^{c_x}}_{N, A, dt}\end{eq} &
+    \begin{lay}convective volume flow per area\end{lay} &
+    \begin{lay}materialDB\end{lay} \\
+\hyperlink{"v:99"}{ 79 }\hypertarget{"e:79"}{  } &
+    \begin{eq}{k^{v_x}}_{N, A, dt} := {k^{v_x}}_{N, A, dt}\end{eq} &
+    \begin{lay}link to get volumetric flow coefficient\end{lay} &
+    \begin{lay}materialDB >>> liquid\end{lay} \\
+\hyperlink{"v:100"}{ 80 }\hypertarget{"e:80"}{  } &
+    \begin{eq}{k^{d_x}}_{{N S}, {A S}, dt} := {k^{d_x}}_{{N S}, {A S}, dt}\end{eq} &
+    \begin{lay}link to get diffusional mass flow coefficient\end{lay} &
+    \begin{lay}materialDB >>> liquid\end{lay} \\
+\hyperlink{"v:93"}{ 81 }\hypertarget{"e:81"}{  } &
+    \begin{eq}{k^{d_x}}_{{N S}, {A S}, dt} := \left( -{P}_{{N S}, {A S}, dt} \right) \stackrel{{N S}}{\,\star\,} \left({v_{x}}_{N} \, . \, \left( {V}_{N} \right)^{-1} \, {\odot} \, \left( {\mu}_{{N S}} \right)^{-1}\right) \, . \, \ParDiff{{U}_{N}}{{\mu}_{{N S}}}\end{eq} &
+    \begin{lay}diffusional mass diffusivity per area.\end{lay} &
+    \begin{lay}materialDB\end{lay} \\
+\hyperlink{"v:86"}{ 82 }\hypertarget{"e:82"}{  } &
+    \begin{eq}{\hat{n}^{d}}_{{N S}, dt} := {A_{x}}_{N} \, {\odot} \, {F}_{{N S}, {A S}} \stackrel{{A S}}{\,\star\,} \left(\left( -{k^{d_x}}_{{N S}, {A S}, dt} \right) \, . \, {F}_{{N S}, {A S}} \stackrel{{N S}}{\,\star\,} {\mu}_{{N S}}\right)\end{eq} &
+    \begin{lay}diffusional species flows\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:81"}{ 83 }\hypertarget{"e:83"}{  } &
+    \begin{eq}{\hat{V}}_{A, dt} := {F}_{N, A} \stackrel{A}{\,\star\,} \left( -{k^{v_x}}_{N, A, dt} \right) \, . \, {A_{x}}_{N} \, . \, {F}_{N, A} \stackrel{N}{\,\star\,} {p}_{N}\end{eq} &
+    \begin{lay}volumetric flow\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hyperlink{"v:107"}{ 86 }\hypertarget{"e:86"}{  } &
+    \begin{eq}{k_{granulate}}_{dt} := {k_{granulate}}_{dt}\end{eq} &
+    \begin{lay}link to kinetic granulation constant\end{lay} &
+    \begin{lay}materialDB >>> solid\end{lay} \\
+\hyperlink{"v:108"}{ 87 }\hypertarget{"e:87"}{  } &
+    \begin{eq}{\tilde{N}}_{N, dt} := {k_{granulate}}_{dt} \, . \, {r}_{N}\end{eq} &
+    \begin{lay}granulation dynamics\end{lay} &
+    \begin{lay}solid\end{lay} \\
+\hyperlink{"v:110"}{ 89 }\hypertarget{"e:89"}{  } &
+    \begin{eq}{{N}_{t}}_{N, dt} := \ParDiff{{\tilde{N}}_{N, dt}}{{r}_{N}}\end{eq} &
+    \begin{lay}population balance PDE\end{lay} &
+    \begin{lay}solid\end{lay} \\
+\hyperlink{"v:111"}{ 90 }\hypertarget{"e:90"}{  } &
+    \begin{eq}{A}_{N} := {U}_{N}  - {T}_{N} \, . \, {S}_{N}\end{eq} &
+    \begin{lay}definition of Helmholtz energy\end{lay} &
+    \begin{lay}physical\end{lay} \\
+\hyperlink{"v:112"}{ 91 }\hypertarget{"e:91"}{  } &
+    \begin{eq}{G}_{N} := {U}_{N}  + {p}_{N} \, . \, {V}_{N}  - {T}_{N} \, . \, {S}_{N}\end{eq} &
+    \begin{lay}definition of Gibbs free energy\end{lay} &
+    \begin{lay}physical\end{lay} \\
+\hyperlink{"v:31"}{ 92 }\hypertarget{"e:92"}{  } &
+    \begin{eq}{\mu}_{{N S}} := \ParDiff{{G}_{N}}{{n}_{{N S}}}\end{eq} &
+    \begin{lay}chemical potential from Gibbs free energy\end{lay} &
+    \begin{lay}physical\end{lay} \\
+\hyperlink{"v:118"}{ 93 }\hypertarget{"e:93"}{  } &
+    \begin{eq}{\alpha}_{N, dt} := {a}_{N, dt} \, . \, sin({t}_{N} \, . \, {f}_{})\end{eq} &
+    \begin{lay}stirrer function\end{lay} &
+    \begin{lay}mixing\end{lay} \\
+\hyperlink{"v:120"}{ 94 }\hypertarget{"e:94"}{  } &
+    \begin{eq}{one}_{} := Set({\#}_{}, -)\end{eq} &
+    \begin{lay}one\end{lay} &
+    \begin{lay}root\end{lay} \\
+\hyperlink{"v:121"}{ 95 }\hypertarget{"e:95"}{  } &
+    \begin{eq}{1}_{N} := Set({y}_{N}, -)\end{eq} &
+    \begin{lay}one of the same dimension as y\end{lay} &
+    \begin{lay}mixing\end{lay} \\
+\hyperlink{"v:122"}{ 96 }\hypertarget{"e:96"}{  } &
+    \begin{eq}{dy}_{N, dt} := {\alpha}_{N, dt} \, . \, \left({\gamma}_{} \, . \, {y}_{N}  - {\beta}_{} \, . \, \left({y}_{N}  - {1}_{N}\right)\right)\end{eq} &
+    \begin{lay}mixing differential equation\end{lay} &
+    \begin{lay}mixing\end{lay} \\
+\hyperlink{"v:87"}{ 97 }\hypertarget{"e:97"}{  } &
+    \begin{eq}{dndt}_{{N S}, dt} := Set({dndt}_{{N S}, dt}, {0}_{})\end{eq} &
+    \begin{lay}zero accumulation\end{lay} &
+    \begin{lay}macroscopic\end{lay} \\
+\hline
+\end{longtable}

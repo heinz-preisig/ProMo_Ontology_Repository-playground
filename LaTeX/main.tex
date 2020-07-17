@@ -1,0 +1,350 @@
+
+% automatically generated - do not edit
+%
+% =======================================
+
+\documentclass[landscape]{article}
+\usepackage[T1]{fontenc}
+\usepackage{longtable}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+
+\usepackage[text={\textwidth,10cm},
+		a4paper,
+		headsep=0.7cm,
+		top=2cm,
+		bottom=2cm,
+		left=2cm,
+		right=2cm,
+		%		showframe,
+		showcrop,
+		%nofoot,
+		nomarginpar
+		]{geometry}
+\usepackage[%
+        backref,
+        %	ps2pdf,
+        %	dvips,
+        final,
+        %pdftitle={#1},
+        pdfauthor={Heinz A Preisig},
+        pdfsubject={'CAM'},
+        colorlinks=true,
+        linkcolor=red,
+        citecolor=blue,
+        anchorcolor=blue,
+        hyperindex=true,
+        bookmarks,
+        bookmarksopen=true,
+        bookmarksnumbered=true,
+        bookmarksdepth=10,
+        hyperfigures=true,
+        %a4paper,
+        linktocpage=true,
+        pageanchor=true,
+        ]{hyperref}
+
+\usepackage{enumitem}
+
+%% math packages
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{calligra}
+\usepackage{array}
+
+%% >>>>>>>>>>>>>>>> user definitions BIBLIOGRAPHY & DEFS <<<<<<<<<<<<<<<<<<<<<<<<
+
+
+%% personal styles and definitions
+%\usepackage{mystyle}
+%\def\mydefs{defs}
+%\usepackage[english]{babel}
+%\usepackage{blindtext}
+%\usepackage{listings}
+%\usepackage{multirow}
+%\usepackage{inconsolata}
+%\usepackage{glossaries}
+%\usepackage{pdflscape}
+%\usepackage{caption} % For mimicing a figure in a minipage
+
+%\catcode`\&=12
+\input{./resources/defs}
+\input{./resources/defvars}
+\parindent=0pt
+
+
+
+\newenvironment{variables}{
+	\begin{itemize}[leftmargin=4cm, align=left, labelwidth=3cm, noitemsep]
+	}
+	{\end{itemize}}
+\newenvironment{lay}{\catcode`\_=12}{\catcode`\_=8}
+\newenvironment{IND}{\catcode`\&=12\catcode`\_=12}{\catcode`\&=4\catcode`\_=8}
+
+\newcolumntype{P}[1]{>{$}p{#1}<{$}}
+
+
+\newenvironment{eq}{\begin{minipage}{10cm}$}{$\end{minipage} }
+%\newenvironment{lay}{\catcode`\_=12}{\catcode`\_=8}
+
+
+% ==================================== body  =====================================
+\begin{document}
+
+
+\section{Variables}
+
+\section{ root } \input{ variables_root.tex }
+\section{ physical } \input{ variables_physical.tex }
+\section{ control } \input{ variables_control.tex }
+\section{ macroscopic } \input{ variables_macroscopic.tex }
+\section{ materialDB } \input{ variables_materialDB.tex }
+\section{ mixing } \input{ variables_mixing.tex }
+\section{ fluid } \input{ variables_fluid.tex }
+\section{ solid } \input{ variables_solid.tex }
+\section{ liquid } \input{ variables_liquid.tex }
+\section{ gas } \input{ variables_gas.tex }
+\section{ control--gas } \input{ variables_control--gas.tex }
+\section{ gas--control } \input{ variables_gas--control.tex }
+\section{ control--liquid } \input{ variables_control--liquid.tex }
+\section{ liquid--control } \input{ variables_liquid--control.tex }
+\section{ control--materialDB } \input{ variables_control--materialDB.tex }
+\section{ materialDB--control } \input{ variables_materialDB--control.tex }
+\section{ control--mixing } \input{ variables_control--mixing.tex }
+\section{ mixing--control } \input{ variables_mixing--control.tex }
+\section{ control--solid } \input{ variables_control--solid.tex }
+\section{ solid--control } \input{ variables_solid--control.tex }
+\section{ gas--materialDB } \input{ variables_gas--materialDB.tex }
+\section{ materialDB--gas } \input{ variables_materialDB--gas.tex }
+\section{ gas--mixing } \input{ variables_gas--mixing.tex }
+\section{ mixing--gas } \input{ variables_mixing--gas.tex }
+\section{ liquid--materialDB } \input{ variables_liquid--materialDB.tex }
+\section{ materialDB--liquid } \input{ variables_materialDB--liquid.tex }
+\section{ liquid--mixing } \input{ variables_liquid--mixing.tex }
+\section{ mixing--liquid } \input{ variables_mixing--liquid.tex }
+\section{ materialDB--mixing } \input{ variables_materialDB--mixing.tex }
+\section{ mixing--materialDB } \input{ variables_mixing--materialDB.tex }
+\section{ materialDB--solid } \input{ variables_materialDB--solid.tex }
+\section{ solid--materialDB } \input{ variables_solid--materialDB.tex }
+\section{ mixing--solid } \input{ variables_mixing--solid.tex }
+\section{ solid--mixing } \input{ variables_solid--mixing.tex }
+\section{ gas--liquid } \input{ variables_gas--liquid.tex }
+\section{ gas--solid } \input{ variables_gas--solid.tex }
+\section{ liquid--solid } \input{ variables_liquid--solid.tex }
+
+\newpage
+\section{Equations}
+
+%\subsection{Selections}  			{ \input{equations_select}}
+%\newpage
+\subsection{Model equations} 	{ \input{equations_generic}}
+\newpage
+\subsection{Instantiations}   { \input{equations_instantiate}}
+\newpage
+
+\pagestyle{empty}
+\def\dotgrapha#1{\newpage
+	\includegraphics[scale=0.6,angle=0, trim=0 0cm 0cm 0cm]{#1}}
+
+\def\dotgraphb#1{\newpage
+	\includegraphics[width=\textwidth,
+	                 height=\textheight,
+	                 trim=0 0cm 0cm 0cm]{#1}}
+\def\dotgraphc#1{\newpage
+	             	\includegraphics[%width=\textwidth,
+	             	%height=\textheight,
+	             	trim=0 0cm 0cm 0cm]{#1}}
+% trim l b r t
+
+\newpage
+\section{Graphs}
+
+
+\IfFileExists{../ontology_graphs/graph__root.ps{
+    \subsection{ root }
+    \dotgrapha{../ontology_graphs/graph__root.ps}
+    }
+    {}
+\IfFileExists{../ontology_graphs/graph__physical.ps{
+    \subsection{ physical }
+    \dotgrapha{../ontology_graphs/graph__physical.ps}
+    }
+    {}
+\IfFileExists{../ontology_graphs/graph__control.ps{
+    \subsection{ control }
+    \dotgrapha{../ontology_graphs/graph__control.ps}
+    }
+    {}
+\IfFileExists{../ontology_graphs/graph__macroscopic.ps{
+    \subsection{ macroscopic }
+    \dotgrapha{../ontology_graphs/graph__macroscopic.ps}
+    }
+    {}
+\IfFileExists{../ontology_graphs/graph__materialDB.ps{
+    \subsection{ materialDB }
+    \dotgrapha{../ontology_graphs/graph__materialDB.ps}
+    }
+    {}
+\IfFileExists{../ontology_graphs/graph__mixing.ps{
+    \subsection{ mixing }
+    \dotgrapha{../ontology_graphs/graph__mixing.ps}
+    }
+    {}
+\IfFileExists{../ontology_graphs/graph__fluid.ps{
+    \subsection{ fluid }
+    \dotgrapha{../ontology_graphs/graph__fluid.ps}
+    }
+    {}
+\IfFileExists{../ontology_graphs/graph__solid.ps{
+    \subsection{ solid }
+    \dotgrapha{../ontology_graphs/graph__solid.ps}
+    }
+    {}
+\IfFileExists{../ontology_graphs/graph__liquid.ps{
+    \subsection{ liquid }
+    \dotgrapha{../ontology_graphs/graph__liquid.ps}
+    }
+    {}
+\IfFileExists{../ontology_graphs/graph__gas.ps{
+    \subsection{ gas }
+    \dotgrapha{../ontology_graphs/graph__gas.ps}
+    }
+    {}
+\IfFileExists{../ontology_graphs/graph__control--gas.ps{
+    \subsection{ control--gas }
+    \dotgrapha{../ontology_graphs/graph__control--gas.ps}
+    }
+    {}
+\IfFileExists{../ontology_graphs/graph__gas--control.ps{
+    \subsection{ gas--control }
+    \dotgrapha{../ontology_graphs/graph__gas--control.ps}
+    }
+    {}
+\IfFileExists{../ontology_graphs/graph__control--liquid.ps{
+    \subsection{ control--liquid }
+    \dotgrapha{../ontology_graphs/graph__control--liquid.ps}
+    }
+    {}
+\IfFileExists{../ontology_graphs/graph__liquid--control.ps{
+    \subsection{ liquid--control }
+    \dotgrapha{../ontology_graphs/graph__liquid--control.ps}
+    }
+    {}
+\IfFileExists{../ontology_graphs/graph__control--materialDB.ps{
+    \subsection{ control--materialDB }
+    \dotgrapha{../ontology_graphs/graph__control--materialDB.ps}
+    }
+    {}
+\IfFileExists{../ontology_graphs/graph__materialDB--control.ps{
+    \subsection{ materialDB--control }
+    \dotgrapha{../ontology_graphs/graph__materialDB--control.ps}
+    }
+    {}
+\IfFileExists{../ontology_graphs/graph__control--mixing.ps{
+    \subsection{ control--mixing }
+    \dotgrapha{../ontology_graphs/graph__control--mixing.ps}
+    }
+    {}
+\IfFileExists{../ontology_graphs/graph__mixing--control.ps{
+    \subsection{ mixing--control }
+    \dotgrapha{../ontology_graphs/graph__mixing--control.ps}
+    }
+    {}
+\IfFileExists{../ontology_graphs/graph__control--solid.ps{
+    \subsection{ control--solid }
+    \dotgrapha{../ontology_graphs/graph__control--solid.ps}
+    }
+    {}
+\IfFileExists{../ontology_graphs/graph__solid--control.ps{
+    \subsection{ solid--control }
+    \dotgrapha{../ontology_graphs/graph__solid--control.ps}
+    }
+    {}
+\IfFileExists{../ontology_graphs/graph__gas--materialDB.ps{
+    \subsection{ gas--materialDB }
+    \dotgrapha{../ontology_graphs/graph__gas--materialDB.ps}
+    }
+    {}
+\IfFileExists{../ontology_graphs/graph__materialDB--gas.ps{
+    \subsection{ materialDB--gas }
+    \dotgrapha{../ontology_graphs/graph__materialDB--gas.ps}
+    }
+    {}
+\IfFileExists{../ontology_graphs/graph__gas--mixing.ps{
+    \subsection{ gas--mixing }
+    \dotgrapha{../ontology_graphs/graph__gas--mixing.ps}
+    }
+    {}
+\IfFileExists{../ontology_graphs/graph__mixing--gas.ps{
+    \subsection{ mixing--gas }
+    \dotgrapha{../ontology_graphs/graph__mixing--gas.ps}
+    }
+    {}
+\IfFileExists{../ontology_graphs/graph__liquid--materialDB.ps{
+    \subsection{ liquid--materialDB }
+    \dotgrapha{../ontology_graphs/graph__liquid--materialDB.ps}
+    }
+    {}
+\IfFileExists{../ontology_graphs/graph__materialDB--liquid.ps{
+    \subsection{ materialDB--liquid }
+    \dotgrapha{../ontology_graphs/graph__materialDB--liquid.ps}
+    }
+    {}
+\IfFileExists{../ontology_graphs/graph__liquid--mixing.ps{
+    \subsection{ liquid--mixing }
+    \dotgrapha{../ontology_graphs/graph__liquid--mixing.ps}
+    }
+    {}
+\IfFileExists{../ontology_graphs/graph__mixing--liquid.ps{
+    \subsection{ mixing--liquid }
+    \dotgrapha{../ontology_graphs/graph__mixing--liquid.ps}
+    }
+    {}
+\IfFileExists{../ontology_graphs/graph__materialDB--mixing.ps{
+    \subsection{ materialDB--mixing }
+    \dotgrapha{../ontology_graphs/graph__materialDB--mixing.ps}
+    }
+    {}
+\IfFileExists{../ontology_graphs/graph__mixing--materialDB.ps{
+    \subsection{ mixing--materialDB }
+    \dotgrapha{../ontology_graphs/graph__mixing--materialDB.ps}
+    }
+    {}
+\IfFileExists{../ontology_graphs/graph__materialDB--solid.ps{
+    \subsection{ materialDB--solid }
+    \dotgrapha{../ontology_graphs/graph__materialDB--solid.ps}
+    }
+    {}
+\IfFileExists{../ontology_graphs/graph__solid--materialDB.ps{
+    \subsection{ solid--materialDB }
+    \dotgrapha{../ontology_graphs/graph__solid--materialDB.ps}
+    }
+    {}
+\IfFileExists{../ontology_graphs/graph__mixing--solid.ps{
+    \subsection{ mixing--solid }
+    \dotgrapha{../ontology_graphs/graph__mixing--solid.ps}
+    }
+    {}
+\IfFileExists{../ontology_graphs/graph__solid--mixing.ps{
+    \subsection{ solid--mixing }
+    \dotgrapha{../ontology_graphs/graph__solid--mixing.ps}
+    }
+    {}
+\IfFileExists{../ontology_graphs/graph__gas--liquid.ps{
+    \subsection{ gas--liquid }
+    \dotgrapha{../ontology_graphs/graph__gas--liquid.ps}
+    }
+    {}
+\IfFileExists{../ontology_graphs/graph__gas--solid.ps{
+    \subsection{ gas--solid }
+    \dotgrapha{../ontology_graphs/graph__gas--solid.ps}
+    }
+    {}
+\IfFileExists{../ontology_graphs/graph__liquid--solid.ps{
+    \subsection{ liquid--solid }
+    \dotgrapha{../ontology_graphs/graph__liquid--solid.ps}
+    }
+    {}
+
+\end{document}
+% ================================== end =========================================

@@ -1,0 +1,12 @@
+{
+  "has-port-variables": [
+    "constant",
+    "frame",
+    "state",
+    "network",
+    "projection"
+  ],
+  "indexing": {
+    "control": "differential_state"
+  }
+}
