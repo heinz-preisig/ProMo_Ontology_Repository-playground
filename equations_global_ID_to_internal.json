@@ -154,11 +154,6 @@
     "network": "root",
     "rhs": " Instantiate ( t )"
   },
-  "65": {
-    "lhs": "n",
-    "network": "macroscopic",
-    "rhs": " Integral ( dndt :: t in [ to , te ] ) + n0"
-  },
   "71": {
     "lhs": "rho",
     "network": "materialDB",
@@ -253,5 +248,10 @@
     "lhs": "dndt",
     "network": "macroscopic",
     "rhs": " Instantiate ( dndt , zero )"
+  },
+  "98": {
+    "lhs": "n",
+    "network": "macroscopic",
+    "rhs": " Integral ( dndt :: t in [ to , te ] )"
   }
 }

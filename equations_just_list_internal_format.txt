@@ -29,7 +29,6 @@
 62 :: dndt =  fnv + fnd + pn
 63 :: to =  Instantiate ( t )
 64 :: te =  Instantiate ( t )
-65 :: n =  Integral ( dndt :: t in [ to , te ] ) + n0
 71 :: rho =  m . inv ( V )
 76 :: kc_x =  neg ( P_N_A_dt ) | N | ( mm | S in N & S | inv ( mu ) ) . inv ( V ) . ParDiff ( U , p ) . vx
 78 :: kv_x =  inv ( rho ) . kc_x
@@ -49,3 +48,4 @@
 95 :: y_one =  Instantiate ( y  )
 96 :: dy =  alpha . ( gamma . y - beta . ( y - y_one ) )
 97 :: dndt =  Instantiate ( dndt , zero )
+98 :: n =  Integral ( dndt :: t in [ to , te ] )

@@ -154,11 +154,6 @@
     "network": "root",
     "rhs": "Set({t}_{N}, -)"
   },
-  "65": {
-    "lhs": "n",
-    "network": "macroscopic",
-    "rhs": "\\int_{ {to}_{N} }^{ {te}_{N} } \\, {dndt}_{{N S}, dt} \\enskip d\\,{t}_{N}  + {n^{0}}_{{N S}}"
-  },
   "71": {
     "lhs": "rho",
     "network": "materialDB",
@@ -252,6 +247,11 @@
   "97": {
     "lhs": "dndt",
     "network": "macroscopic",
-    "rhs": "Set({dndt}_{{N S}, dt}, {0}_{})"
+    "rhs": "Set({\\dot{n}}_{{N S}, dt}, {0}_{})"
+  },
+  "98": {
+    "lhs": "n",
+    "network": "macroscopic",
+    "rhs": "\\int_{ {to}_{N} }^{ {te}_{N} } \\, {\\dot{n}}_{{N S}, dt} \\enskip d\\,{t}_{N}"
   }
 }

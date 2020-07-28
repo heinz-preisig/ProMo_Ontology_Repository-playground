@@ -154,11 +154,6 @@
     "network": "root",
     "rhs": " O_11 D_0 V_1 D_7- D_1"
   },
-  "65": {
-    "lhs": "n",
-    "network": "macroscopic",
-    "rhs": " O_9 D_0 V_87 D_8 V_1 O_14 D_2 V_88 D_7 V_89 D_3 D_1 O_0 V_56"
-  },
   "71": {
     "lhs": "rho",
     "network": "materialDB",
@@ -253,5 +248,10 @@
     "lhs": "dndt",
     "network": "macroscopic",
     "rhs": " O_11 D_0 V_87 D_7 V_7 D_1"
+  },
+  "98": {
+    "lhs": "n",
+    "network": "macroscopic",
+    "rhs": " O_9 D_0 V_87 D_8 V_1 O_14 D_2 V_88 D_7 V_89 D_3 D_1"
   }
 }

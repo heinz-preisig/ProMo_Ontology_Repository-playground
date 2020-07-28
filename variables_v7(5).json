@@ -1,0 +1,1031 @@
+{
+  "version": "7",
+  "variables": {
+    "1": {
+      "aliases": "{'global_ID': ' V_1', 'python': 't', 'cpp': 't', 'matlab': 't', 'latex': 't', 'internal_code': 't'}",
+      "doc": "time",
+      "equations": "{}",
+      "index_structures": "[1]",
+      "label": "t",
+      "network": "root",
+      "type": "frame",
+      "units": "[1, 0, 0, 0, 0, 0, 0, 0]"
+    },
+    "2": {
+      "aliases": "{'global_ID': ' V_2', 'python': 'F', 'cpp': 'F', 'matlab': 'F', 'latex': 'F', 'internal_code': 'F'}",
+      "doc": "incidence matrix of directed graph",
+      "equations": "{}",
+      "index_structures": "[1, 2]",
+      "label": "F",
+      "network": "root",
+      "type": "network",
+      "units": "[0, 0, 0, 0, 0, 0, 0, 0]"
+    },
+    "5": {
+      "aliases": "{'global_ID': ' V_5', 'python': 'value', 'cpp': 'value', 'matlab': 'value', 'latex': '\\\\#', 'internal_code': 'value'}",
+      "doc": "a value",
+      "equations": "{}",
+      "index_structures": "[]",
+      "label": "value",
+      "network": "root",
+      "type": "constant",
+      "units": "[0, 0, 0, 0, 0, 0, 0, 0]"
+    },
+    "6": {
+      "aliases": "{'global_ID': ' V_6', 'python': 'half', 'cpp': 'half', 'matlab': 'half', 'latex': '1 \\\\backslash 2', 'internal_code': 'half'}",
+      "doc": "one half",
+      "equations": "{1: {'rhs': ' O_11 D_0 V_5 D_1', 'type': 'generic', 'doc': 'one half', 'network': 'root', 'incidence_list': ['5']}}",
+      "index_structures": "[]",
+      "label": "half",
+      "network": "root",
+      "type": "constant",
+      "units": "[0, 0, 0, 0, 0, 0, 0, 0]"
+    },
+    "7": {
+      "aliases": "{'global_ID': ' V_7', 'python': 'zero', 'cpp': 'zero', 'matlab': 'zero', 'latex': '0', 'internal_code': 'zero'}",
+      "doc": "zero",
+      "equations": "{2: {'rhs': ' O_11 D_0 V_5 D_1', 'type': 'generic', 'doc': 'zero', 'network': 'root', 'incidence_list': ['5']}}",
+      "index_structures": "[]",
+      "label": "zero",
+      "network": "root",
+      "type": "constant",
+      "units": "[0, 0, 0, 0, 0, 0, 0, 0]"
+    },
+    "8": {
+      "aliases": "{'global_ID': ' V_8', 'python': 'dt', 'cpp': 'dt', 'matlab': 'dt', 'latex': '\\\\partial{t}', 'internal_code': 'dt'}",
+      "doc": "differential time",
+      "equations": "{3: {'rhs': ' F_12 D_0 V_1 D_1', 'type': 'generic', 'doc': 'differential time', 'network': 'root', 'incidence_list': ['1']}}",
+      "index_structures": "[1, 9]",
+      "label": "dt",
+      "network": "root",
+      "type": "*diffFrame",
+      "units": "[1, 0, 0, 0, 0, 0, 0, 0]"
+    },
+    "9": {
+      "aliases": "{'global_ID': ' V_9', 'python': 'rx', 'cpp': 'rx', 'matlab': 'rx', 'latex': 'r_{x}', 'internal_code': 'rx'}",
+      "doc": "spatial coordinate x",
+      "equations": "{}",
+      "index_structures": "[1]",
+      "label": "rx",
+      "network": "physical",
+      "type": "frame",
+      "units": "[0, 1, 0, 0, 0, 0, 0, 0]"
+    },
+    "10": {
+      "aliases": "{'global_ID': ' V_10', 'python': 'n', 'cpp': 'n', 'matlab': 'n', 'latex': 'n', 'internal_code': 'n'}",
+      "doc": "integral ",
+      "equations": "{98: {'rhs': ' O_9 D_0 V_87 D_8 V_1 O_14 D_2 V_88 D_7 V_89 D_3 D_1', 'type': 'generic', 'doc': 'integral ', 'network': 'macroscopic', 'incidence_list': ['1', '87', '88', '89']}}",
+      "index_structures": "[5]",
+      "label": "n",
+      "network": "physical",
+      "type": "state",
+      "units": "[0, 0, 1, 0, 0, 0, 0, 0]"
+    },
+    "11": {
+      "aliases": "{'global_ID': ' V_11', 'python': 'U', 'cpp': 'U', 'matlab': 'U', 'latex': 'U', 'internal_code': 'U'}",
+      "doc": "internal energy",
+      "equations": "{}",
+      "index_structures": "[1]",
+      "label": "U",
+      "network": "physical",
+      "type": "state",
+      "units": "[-2, 2, 0, 1, 0, 0, 0, 0]"
+    },
+    "12": {
+      "aliases": "{'global_ID': ' V_12', 'python': 'S', 'cpp': 'S', 'matlab': 'S', 'latex': 'S', 'internal_code': 'S'}",
+      "doc": "entropy",
+      "equations": "{}",
+      "index_structures": "[1]",
+      "label": "S",
+      "network": "physical",
+      "type": "state",
+      "units": "[-2, 2, 0, 1, -1, 0, 0, 0]"
+    },
+    "13": {
+      "aliases": "{'global_ID': ' V_13', 'python': 'V', 'cpp': 'V', 'matlab': 'V', 'latex': 'V', 'internal_code': 'V'}",
+      "doc": "volume",
+      "equations": "{}",
+      "index_structures": "[1]",
+      "label": "V",
+      "network": "physical",
+      "type": "state",
+      "units": "[0, 3, 0, 0, 0, 0, 0, 0]"
+    },
+    "14": {
+      "aliases": "{'global_ID': ' V_14', 'python': 'T', 'cpp': 'T', 'matlab': 'T', 'latex': 'T', 'internal_code': 'T'}",
+      "doc": "definition of temperature",
+      "equations": "{4: {'rhs': ' O_7 D_0 V_11 D_7 V_12 D_1', 'type': 'generic', 'doc': 'definition of temperature', 'network': 'physical', 'incidence_list': ['11', '12']}}",
+      "index_structures": "[1]",
+      "label": "T",
+      "network": "physical",
+      "type": "effort",
+      "units": "[0, 0, 0, 0, 1, 0, 0, 0]"
+    },
+    "15": {
+      "aliases": "{'global_ID': ' V_15', 'python': 'p', 'cpp': 'p', 'matlab': 'p', 'latex': 'p', 'internal_code': 'p'}",
+      "doc": "definition of pressure",
+      "equations": "{5: {'rhs': ' F_11 D_0 O_7 D_0 V_11 D_7 V_13 D_1 D_1', 'type': 'generic', 'doc': 'definition of pressure', 'network': 'physical', 'incidence_list': ['11', '13']}}",
+      "index_structures": "[1]",
+      "label": "p",
+      "network": "physical",
+      "type": "effort",
+      "units": "[-2, -1, 0, 1, 0, 0, 0, 0]"
+    },
+    "17": {
+      "aliases": "{'global_ID': ' V_17', 'python': 'H', 'cpp': 'H', 'matlab': 'H', 'latex': 'H', 'internal_code': 'H'}",
+      "doc": "definition of enthalpy",
+      "equations": "{7: {'rhs': ' V_11 O_0 V_15 O_4 V_13', 'type': 'generic', 'doc': 'definition of enthalpy', 'network': 'physical', 'incidence_list': ['11', '13', '15']}}",
+      "index_structures": "[1]",
+      "label": "H",
+      "network": "physical",
+      "type": "secondaryState",
+      "units": "[-2, 2, 0, 1, 0, 0, 0, 0]"
+    },
+    "18": {
+      "aliases": "{'global_ID': ' V_18', 'python': 'vx', 'cpp': 'vx', 'matlab': 'vx', 'latex': 'v_{x}', 'internal_code': 'vx'}",
+      "doc": "definition of velocity in x direction",
+      "equations": "{8: {'rhs': ' O_7 D_0 V_9 D_7 V_1 D_1', 'type': 'generic', 'doc': 'definition of velocity in x direction', 'network': 'physical', 'incidence_list': ['1', '9']}}",
+      "index_structures": "[1]",
+      "label": "vx",
+      "network": "physical",
+      "type": "secondaryState",
+      "units": "[-1, 1, 0, 0, 0, 0, 0, 0]"
+    },
+    "20": {
+      "aliases": "{'global_ID': ' V_20', 'python': 'ry', 'cpp': 'ry', 'matlab': 'ry', 'latex': 'r_{y}', 'internal_code': 'ry'}",
+      "doc": "spatial coordinate y",
+      "equations": "{}",
+      "index_structures": "[1]",
+      "label": "ry",
+      "network": "physical",
+      "type": "frame",
+      "units": "[0, 1, 0, 0, 0, 0, 0, 0]"
+    },
+    "21": {
+      "aliases": "{'global_ID': ' V_21', 'python': 'rz', 'cpp': 'rz', 'matlab': 'rz', 'latex': 'r_{z}', 'internal_code': 'rz'}",
+      "doc": "spatial coordinate z",
+      "equations": "{}",
+      "index_structures": "[1]",
+      "label": "rz",
+      "network": "physical",
+      "type": "frame",
+      "units": "[0, 1, 0, 0, 0, 0, 0, 0]"
+    },
+    "22": {
+      "aliases": "{'global_ID': ' V_22', 'python': 'Ax', 'cpp': 'Ax', 'matlab': 'Ax', 'latex': 'A_{x}', 'internal_code': 'Ax'}",
+      "doc": "area at location x",
+      "equations": "{10: {'rhs': ' V_20 O_4 V_21', 'type': 'generic', 'doc': 'area at location x', 'network': 'physical', 'incidence_list': ['20', '21']}}",
+      "index_structures": "[1]",
+      "label": "Ax",
+      "network": "physical",
+      "type": "secondaryState",
+      "units": "[0, 2, 0, 0, 0, 0, 0, 0]"
+    },
+    "26": {
+      "aliases": "{'global_ID': ' V_26', 'python': 'cp', 'cpp': 'cp', 'matlab': 'cp', 'latex': 'c_{p}', 'internal_code': 'cp'}",
+      "doc": "heat capacity at constant pressure",
+      "equations": "{14: {'rhs': ' O_7 D_0 V_17 D_7 V_14 D_1', 'type': 'generic', 'doc': 'heat capacity at constant pressure', 'network': 'materialDB', 'incidence_list': ['14', '17']}}",
+      "index_structures": "[1]",
+      "label": "cp",
+      "network": "materialDB",
+      "type": "property",
+      "units": "[-2, 2, 0, 1, -1, 0, 0, 0]"
+    },
+    "30": {
+      "aliases": "{'global_ID': ' V_30', 'python': 'F_NS_AS', 'cpp': 'F_NS_AS', 'matlab': 'F_NS_AS', 'latex': 'F', 'internal_code': 'F_NS_AS'}",
+      "doc": "incidence matrix for species network",
+      "equations": "{}",
+      "index_structures": "[5, 6]",
+      "label": "F_NS_AS",
+      "network": "physical",
+      "type": "network",
+      "units": "[0, 0, 0, 0, 0, 0, 0, 0]"
+    },
+    "31": {
+      "aliases": "{'global_ID': ' V_31', 'python': 'mu', 'cpp': 'mu', 'matlab': 'mu', 'latex': '\\\\mu', 'internal_code': 'mu'}",
+      "doc": "chemical potential from Gibbs free energy",
+      "equations": "{18: {'rhs': ' O_7 D_0 V_11 D_7 V_10 D_1', 'type': 'generic', 'doc': 'definition of chemical potential', 'network': 'physical', 'incidence_list': ['10', '11']}, 92: {'rhs': ' O_7 D_0 V_112 D_7 V_10 D_1', 'type': 'generic', 'doc': 'chemical potential from Gibbs free energy', 'network': 'physical', 'incidence_list': ['10', '112']}}",
+      "index_structures": "[5]",
+      "label": "mu",
+      "network": "physical",
+      "type": "effort",
+      "units": "[-2, 2, -1, 1, 0, 0, 0, 0]"
+    },
+    "41": {
+      "aliases": "{'global_ID': ' V_41', 'python': 'P_N_A_dt', 'cpp': 'P_N_A_dt', 'matlab': 'P_N_A_dt', 'latex': 'P', 'internal_code': 'P_N_A_dt'}",
+      "doc": "projection of node to arc (used for mapping transport system material to application arc)",
+      "equations": "{}",
+      "index_structures": "[1, 2, 9]",
+      "label": "P_N_A_dt",
+      "network": "physical",
+      "type": "projection",
+      "units": "[0, 0, 0, 0, 0, 0, 0, 0]"
+    },
+    "45": {
+      "aliases": "{'global_ID': ' V_45', 'python': 'kq_x', 'cpp': 'kq_x', 'matlab': 'kq_x', 'latex': 'k^{q_x}', 'internal_code': 'kq_x'}",
+      "doc": "heat transfer coefficient for an event-dynamic transfer system",
+      "equations": "{31: {'rhs': ' F_11 D_0 V_41 D_1  O_5  I_1 O_5  D_0 F_15 D_0 V_13 D_1 O_4 O_7 D_0 V_11 D_7 V_14 D_1 O_4 V_18 D_1', 'type': 'generic', 'doc': 'heat transfer coefficient for an event-dynamic transfer system', 'network': 'materialDB', 'incidence_list': ['11', '13', '14', '18', '41']}}",
+      "index_structures": "[2, 9]",
+      "label": "kq_x",
+      "network": "materialDB",
+      "type": "property",
+      "units": "[-3, 0, 0, 1, -1, 0, 0, 0]"
+    },
+    "46": {
+      "aliases": "{'global_ID': ' V_46', 'python': 'kq_x', 'cpp': 'kq_x', 'matlab': 'kq_x', 'latex': 'k^{q_x}', 'internal_code': 'kq_x'}",
+      "doc": "link to get heat transfer coefficient",
+      "equations": "{32: {'rhs': ' V_45', 'type': 'generic', 'doc': 'link to get heat transfer coefficient', 'network': 'materialDB >>> liquid', 'incidence_list': ['45']}}",
+      "index_structures": "[2, 9]",
+      "label": "kq_x",
+      "network": "materialDB >>> liquid",
+      "type": "transform",
+      "units": "[-3, 0, 0, 1, -1, 0, 0, 0]"
+    },
+    "49": {
+      "aliases": "{'global_ID': ' V_49', 'python': 'P_NS_AS_dt', 'cpp': 'P_NS_AS_dt', 'matlab': 'P_NS_AS_dt', 'latex': 'P', 'internal_code': 'P_NS_AS_dt'}",
+      "doc": "projection of node to arc (used for mapping transport system material to application arc)",
+      "equations": "{}",
+      "index_structures": "[5, 6, 9]",
+      "label": "P_NS_AS_dt",
+      "network": "physical",
+      "type": "projection",
+      "units": "[0, 0, 0, 0, 0, 0, 0, 0]"
+    },
+    "54": {
+      "aliases": "{'global_ID': ' V_54', 'python': 'fq', 'cpp': 'fq', 'matlab': 'fq', 'latex': '\\\\hat{q}', 'internal_code': 'fq'}",
+      "doc": "heat flow",
+      "equations": "{39: {'rhs': ' V_2  O_5  I_2 O_5  D_0 F_11 D_0 V_46 D_1 O_4 V_22 O_4 V_2  O_5  I_1 O_5  V_14 D_1', 'type': 'generic', 'doc': 'heat flow', 'network': 'macroscopic', 'incidence_list': ['14', '2', '2', '22', '46']}}",
+      "index_structures": "[1, 9]",
+      "label": "fq",
+      "network": "macroscopic",
+      "type": "transport",
+      "units": "[-3, 2, 0, 1, 0, 0, 0, 0]"
+    },
+    "56": {
+      "aliases": "{'global_ID': ' V_56', 'python': 'n0', 'cpp': 'n0', 'matlab': 'n0', 'latex': 'n^{0}', 'internal_code': 'n0'}",
+      "doc": "initial condition",
+      "equations": "{41: {'rhs': ' O_11 D_0 V_10 D_1', 'type': 'generic', 'doc': 'initial condition', 'network': 'macroscopic', 'incidence_list': ['10']}}",
+      "index_structures": "[5]",
+      "label": "n0",
+      "network": "macroscopic",
+      "type": "state",
+      "units": "[0, 0, 1, 0, 0, 0, 0, 0]"
+    },
+    "57": {
+      "aliases": "{'global_ID': ' V_57', 'python': 'P_NS_KS', 'cpp': 'P_NS_KS', 'matlab': 'P_NS_KS', 'latex': 'P', 'internal_code': 'P_NS_KS'}",
+      "doc": "projection of node species onto reaction species",
+      "equations": "{}",
+      "index_structures": "[5, 8]",
+      "label": "P_NS_KS",
+      "network": "macroscopic",
+      "type": "projection",
+      "units": "[0, 0, 0, 0, 0, 0, 0, 0]"
+    },
+    "58": {
+      "aliases": "{'global_ID': ' V_58', 'python': 'P_K_NK', 'cpp': 'P_K_NK', 'matlab': 'P_K_NK', 'latex': 'P', 'internal_code': 'P_K_NK'}",
+      "doc": "projection reaction on node x reactions",
+      "equations": "{}",
+      "index_structures": "[4, 7]",
+      "label": "P_K_NK",
+      "network": "macroscopic",
+      "type": "projection",
+      "units": "[0, 0, 0, 0, 0, 0, 0, 0]"
+    },
+    "59": {
+      "aliases": "{'global_ID': ' V_59', 'python': 'P_N_NK', 'cpp': 'P_N_NK', 'matlab': 'P_N_NK', 'latex': 'P', 'internal_code': 'P_N_NK'}",
+      "doc": "projection node to node x reactions",
+      "equations": "{}",
+      "index_structures": "[1, 7]",
+      "label": "P_N_NK",
+      "network": "macroscopic",
+      "type": "projection",
+      "units": "[0, 0, 0, 0, 0, 0, 0, 0]"
+    },
+    "60": {
+      "aliases": "{'global_ID': ' V_60', 'python': 'c', 'cpp': 'c', 'matlab': 'c', 'latex': 'c', 'internal_code': 'c'}",
+      "doc": "molar concentration",
+      "equations": "{42: {'rhs': ' F_15 D_0 V_13 D_1 O_3 V_10', 'type': 'generic', 'doc': 'molar concentration', 'network': 'macroscopic', 'incidence_list': ['10', '13']}}",
+      "index_structures": "[5]",
+      "label": "c",
+      "network": "macroscopic",
+      "type": "secondaryState",
+      "units": "[0, -3, 1, 0, 0, 0, 0, 0]"
+    },
+    "61": {
+      "aliases": "{'global_ID': ' V_61', 'python': 'c_KS', 'cpp': 'c_KS', 'matlab': 'c_KS', 'latex': 'c', 'internal_code': 'c_KS'}",
+      "doc": "molar concentrations assigned to reaction K",
+      "equations": "{43: {'rhs': ' V_57  O_5  I_5 O_5  V_60', 'type': 'generic', 'doc': 'molar concentrations assigned to reaction K', 'network': 'macroscopic', 'incidence_list': ['57', '60']}}",
+      "index_structures": "[8]",
+      "label": "c_KS",
+      "network": "macroscopic",
+      "type": "conversion",
+      "units": "[0, -3, 1, 0, 0, 0, 0, 0]"
+    },
+    "62": {
+      "aliases": "{'global_ID': ' V_62', 'python': 'N_KS_K', 'cpp': 'N_KS_K', 'matlab': 'N_KS_K', 'latex': 'N', 'internal_code': 'N_KS_K'}",
+      "doc": "stoichiometry for reaction k",
+      "equations": "{}",
+      "index_structures": "[4, 8]",
+      "label": "N_KS_K",
+      "network": "macroscopic",
+      "type": "constant",
+      "units": "[0, 0, 0, 0, 0, 0, 0, 0]"
+    },
+    "63": {
+      "aliases": "{'global_ID': ' V_63', 'python': 'N_NS_NK', 'cpp': 'N_NS_NK', 'matlab': 'N_NS_NK', 'latex': 'N', 'internal_code': 'N_NS_NK'}",
+      "doc": "global stoichiomety block matrix",
+      "equations": "{44: {'rhs': ' V_57  O_5  I_8 O_5  V_62  O_5  I_4 O_5  V_58', 'type': 'generic', 'doc': 'global stoichiomety block matrix', 'network': 'macroscopic', 'incidence_list': ['57', '58', '62']}}",
+      "index_structures": "[5, 7]",
+      "label": "N_NS_NK",
+      "network": "macroscopic",
+      "type": "conversion",
+      "units": "[0, 0, 0, 0, 0, 0, 0, 0]"
+    },
+    "64": {
+      "aliases": "{'global_ID': ' V_64', 'python': 'Ko', 'cpp': 'Ko', 'matlab': 'Ko', 'latex': 'K^{o}', 'internal_code': 'Ko'}",
+      "doc": "Arrhenius prexponential factor (matrix)",
+      "equations": "{}",
+      "index_structures": "[4, 9]",
+      "label": "Ko",
+      "network": "macroscopic",
+      "type": "constant",
+      "units": "[-1, -3, 1, 0, 0, 0, 0, 0]"
+    },
+    "65": {
+      "aliases": "{'global_ID': ' V_65', 'python': 'ka', 'cpp': 'ka', 'matlab': 'ka', 'latex': 'E^{A}', 'internal_code': 'ka'}",
+      "doc": "Arrhenius activation energy ",
+      "equations": "{}",
+      "index_structures": "[4]",
+      "label": "ka",
+      "network": "macroscopic",
+      "type": "constant",
+      "units": "[2, -2, 1, -1, 0, 0, 0, 0]"
+    },
+    "66": {
+      "aliases": "{'global_ID': ' V_66', 'python': 'R', 'cpp': 'R', 'matlab': 'R', 'latex': 'R', 'internal_code': 'R'}",
+      "doc": "gas constant",
+      "equations": "{}",
+      "index_structures": "[]",
+      "label": "R",
+      "network": "physical",
+      "type": "constant",
+      "units": "[2, -2, 1, -1, -1, 0, 0, 0]"
+    },
+    "67": {
+      "aliases": "{'global_ID': ' V_67', 'python': 'T_NK', 'cpp': 'T_NK', 'matlab': 'T_NK', 'latex': 'T', 'internal_code': 'T_NK'}",
+      "doc": "temperature for reactions",
+      "equations": "{45: {'rhs': ' V_59  O_5  I_1 O_5  V_14', 'type': 'generic', 'doc': 'temperature for reactions', 'network': 'macroscopic', 'incidence_list': ['14', '59']}}",
+      "index_structures": "[7]",
+      "label": "T_NK",
+      "network": "macroscopic",
+      "type": "conversion",
+      "units": "[0, 0, 0, 0, 1, 0, 0, 0]"
+    },
+    "68": {
+      "aliases": "{'global_ID': ' V_68', 'python': 'K', 'cpp': 'K', 'matlab': 'K', 'latex': 'K', 'internal_code': 'K'}",
+      "doc": "reaction \"constants\"",
+      "equations": "{46: {'rhs': ' V_64 O_3 F_0 D_0 V_65 O_3 F_15 D_0 V_66 O_4 V_67 D_1 D_1', 'type': 'generic', 'doc': 'reaction \"constants\"', 'network': 'macroscopic', 'incidence_list': ['64', '65', '66', '67']}}",
+      "index_structures": "[7, 9]",
+      "label": "K",
+      "network": "macroscopic",
+      "type": "conversion",
+      "units": "[-1, -3, 1, 0, 0, 0, 0, 0]"
+    },
+    "69": {
+      "aliases": "{'global_ID': ' V_69', 'python': 'c_KS_o', 'cpp': 'c_KS_o', 'matlab': 'c_KS_o', 'latex': 'c^{o}', 'internal_code': 'c_KS_o'}",
+      "doc": "norming concentration -- probability must have no units !",
+      "equations": "{47: {'rhs': ' O_11 D_0 V_61 D_1', 'type': 'generic', 'doc': 'norming concentration -- probability must have no units !', 'network': 'macroscopic', 'incidence_list': ['61']}}",
+      "index_structures": "[8]",
+      "label": "c_KS_o",
+      "network": "macroscopic",
+      "type": "conversion",
+      "units": "[0, -3, 1, 0, 0, 0, 0, 0]"
+    },
+    "71": {
+      "aliases": "{'global_ID': ' V_71', 'python': 'x_KS', 'cpp': 'x_KS', 'matlab': 'x_KS', 'latex': 'x', 'internal_code': 'x_KS'}",
+      "doc": "normed concentration little like more fractions",
+      "equations": "{49: {'rhs': ' F_15 D_0 V_69 D_1 O_4 V_61', 'type': 'generic', 'doc': 'normed concentration little like more fractions', 'network': 'macroscopic', 'incidence_list': ['61', '69']}}",
+      "index_structures": "[8]",
+      "label": "x_KS",
+      "network": "macroscopic",
+      "type": "conversion",
+      "units": "[0, 0, 0, 0, 0, 0, 0, 0]"
+    },
+    "74": {
+      "aliases": "{'global_ID': ' V_74', 'python': 'P_NK_KS', 'cpp': 'P_NK_KS', 'matlab': 'P_NK_KS', 'latex': 'P', 'internal_code': 'P_NK_KS'}",
+      "doc": "projection node x conversion to conversion x species",
+      "equations": "{}",
+      "index_structures": "[7, 8]",
+      "label": "P_NK_KS",
+      "network": "macroscopic",
+      "type": "projection",
+      "units": "[0, 0, 0, 0, 0, 0, 0, 0]"
+    },
+    "75": {
+      "aliases": "{'global_ID': ' V_75', 'python': 'phi', 'cpp': 'phi', 'matlab': 'phi', 'latex': '\\\\phi', 'internal_code': 'phi'}",
+      "doc": "probabiity for the reactions to occur",
+      "equations": "{52: {'rhs': ' V_74  O_5  I_8 O_5  D_0 O_10 D_0 V_71 O_2 D_0 V_62 D_1 D_7 V_62 D_1 D_1', 'type': 'generic', 'doc': 'probabiity for the reactions to occur', 'network': 'macroscopic', 'incidence_list': ['62', '62', '71', '74']}}",
+      "index_structures": "[7]",
+      "label": "phi",
+      "network": "macroscopic",
+      "type": "conversion",
+      "units": "[0, 0, 0, 0, 0, 0, 0, 0]"
+    },
+    "76": {
+      "aliases": "{'global_ID': ' V_76', 'python': 'xi', 'cpp': 'xi', 'matlab': 'xi', 'latex': '\\\\xi', 'internal_code': 'xi'}",
+      "doc": "dyamic extend of reaction",
+      "equations": "{53: {'rhs': ' V_68 O_4 V_75', 'type': 'generic', 'doc': 'dyamic extend of reaction', 'network': 'macroscopic', 'incidence_list': ['68', '75']}}",
+      "index_structures": "[7, 9]",
+      "label": "xi",
+      "network": "macroscopic",
+      "type": "conversion",
+      "units": "[-1, -3, 1, 0, 0, 0, 0, 0]"
+    },
+    "77": {
+      "aliases": "{'global_ID': ' V_77', 'python': 'pn', 'cpp': 'pn', 'matlab': 'pn', 'latex': '\\\\tilde{n}', 'internal_code': 'pn'}",
+      "doc": "production term",
+      "equations": "{54: {'rhs': ' V_13 O_3 D_0 V_63  O_5  I_7 O_5  V_76 D_1', 'type': 'generic', 'doc': 'production term', 'network': 'macroscopic', 'incidence_list': ['13', '63', '76']}}",
+      "index_structures": "[5, 9]",
+      "label": "pn",
+      "network": "macroscopic",
+      "type": "conversion",
+      "units": "[-1, 0, 1, 0, 0, 0, 0, 0]"
+    },
+    "81": {
+      "aliases": "{'global_ID': ' V_81', 'python': 'fV', 'cpp': 'fV', 'matlab': 'fV', 'latex': '\\\\hat{V}', 'internal_code': 'fV'}",
+      "doc": "volumetric flow",
+      "equations": "{83: {'rhs': ' V_2  O_5  I_2 O_5  F_11 D_0 V_99 D_1 O_4 V_22 O_4 V_2  O_5  I_1 O_5  V_15', 'type': 'generic', 'doc': 'volumetric flow', 'network': 'macroscopic', 'incidence_list': ['15', '2', '2', '22', '99']}}",
+      "index_structures": "[2, 9]",
+      "label": "fV",
+      "network": "macroscopic",
+      "type": "transport",
+      "units": "[-1, 3, 0, 0, 0, 0, 0, 0]"
+    },
+    "82": {
+      "aliases": "{'global_ID': ' V_82', 'python': 'dir', 'cpp': 'dir', 'matlab': 'dir', 'latex': 'd', 'internal_code': 'dir'}",
+      "doc": "direction of flow relative to reference coordinate",
+      "equations": "{57: {'rhs': ' F_16 D_0 V_2  O_5  I_1 O_5  V_15 D_1', 'type': 'generic', 'doc': 'direction of flow relative to reference coordinate', 'network': 'macroscopic', 'incidence_list': ['15', '2']}}",
+      "index_structures": "[2]",
+      "label": "dir",
+      "network": "macroscopic",
+      "type": "transport",
+      "units": "[0, 0, 0, 0, 0, 0, 0, 0]"
+    },
+    "83": {
+      "aliases": "{'global_ID': ' V_83', 'python': 'S_NS_AS', 'cpp': 'S_NS_AS', 'matlab': 'S_NS_AS', 'latex': 'S', 'internal_code': 'S_NS_AS'}",
+      "doc": "selection of the flow sources",
+      "equations": "{58: {'rhs': ' V_6 O_4 D_0 V_30 O_1 V_82 O_3 F_10 D_0 V_30 D_1 D_1', 'type': 'generic', 'doc': 'selection of the flow sources', 'network': 'macroscopic', 'incidence_list': ['30', '30', '6', '82']}}",
+      "index_structures": "[5, 6]",
+      "label": "S_NS_AS",
+      "network": "macroscopic",
+      "type": "transport",
+      "units": "[0, 0, 0, 0, 0, 0, 0, 0]"
+    },
+    "84": {
+      "aliases": "{'global_ID': ' V_84', 'python': 'c_AS', 'cpp': 'c_AS', 'matlab': 'c_AS', 'latex': 'c', 'internal_code': 'c_AS'}",
+      "doc": "concentration in the convective flows",
+      "equations": "{59: {'rhs': ' V_83  O_5  I_5 O_5  V_60', 'type': 'generic', 'doc': 'concentration in the convective flows', 'network': 'macroscopic', 'incidence_list': ['60', '83']}}",
+      "index_structures": "[6]",
+      "label": "c_AS",
+      "network": "macroscopic",
+      "type": "transport",
+      "units": "[0, -3, 1, 0, 0, 0, 0, 0]"
+    },
+    "85": {
+      "aliases": "{'global_ID': ' V_85', 'python': 'fnv', 'cpp': 'fnv', 'matlab': 'fnv', 'latex': '\\\\hat{n}^{v}', 'internal_code': 'fnv'}",
+      "doc": "convective species flow",
+      "equations": "{60: {'rhs': ' V_30  O_5  I_6 O_5  D_0 V_81 O_3 V_84 D_1', 'type': 'generic', 'doc': 'convective species flow', 'network': 'macroscopic', 'incidence_list': ['30', '81', '84']}}",
+      "index_structures": "[5, 9]",
+      "label": "fnv",
+      "network": "macroscopic",
+      "type": "transport",
+      "units": "[-1, 0, 1, 0, 0, 0, 0, 0]"
+    },
+    "86": {
+      "aliases": "{'global_ID': ' V_86', 'python': 'fnd', 'cpp': 'fnd', 'matlab': 'fnd', 'latex': '\\\\hat{n}^{d}', 'internal_code': 'fnd'}",
+      "doc": "diffusional species flows",
+      "equations": "{82: {'rhs': ' V_22 O_3 V_30  O_5  I_6 O_5  D_0 F_11 D_0 V_100 D_1 O_4 V_30  O_5  I_5 O_5  V_31 D_1', 'type': 'generic', 'doc': 'diffusional species flows', 'network': 'macroscopic', 'incidence_list': ['100', '22', '30', '30', '31']}}",
+      "index_structures": "[5, 9]",
+      "label": "fnd",
+      "network": "macroscopic",
+      "type": "transport",
+      "units": "[-1, 0, 1, 0, 0, 0, 0, 0]"
+    },
+    "87": {
+      "aliases": "{'global_ID': ' V_87', 'python': 'dndt', 'cpp': 'dndt', 'matlab': 'dndt', 'latex': 'dndt', 'internal_code': 'dndt'}",
+      "doc": "zero accumulation",
+      "equations": "{62: {'rhs': ' V_85 O_0 V_86 O_0 V_77', 'type': 'generic', 'doc': 'differential species balances', 'network': 'macroscopic', 'incidence_list': ['77', '85', '86']}, 97: {'rhs': ' O_11 D_0 V_87 D_7 V_7 D_1', 'type': 'generic', 'doc': 'zero accumulation', 'network': 'macroscopic', 'incidence_list': ['7', '87']}}",
+      "index_structures": "[5, 9]",
+      "label": "dndt",
+      "network": "macroscopic",
+      "type": "state",
+      "units": "[-1, 0, 1, 0, 0, 0, 0, 0]"
+    },
+    "88": {
+      "aliases": "{'global_ID': ' V_88', 'python': 'to', 'cpp': 'to', 'matlab': 'to', 'latex': 'to', 'internal_code': 'to'}",
+      "doc": "initial time",
+      "equations": "{63: {'rhs': ' O_11 D_0 V_1 D_1', 'type': 'generic', 'doc': 'initial time', 'network': 'root', 'incidence_list': ['1']}}",
+      "index_structures": "[1]",
+      "label": "to",
+      "network": "root",
+      "type": "frame",
+      "units": "[1, 0, 0, 0, 0, 0, 0, 0]"
+    },
+    "89": {
+      "aliases": "{'global_ID': ' V_89', 'python': 'te', 'cpp': 'te', 'matlab': 'te', 'latex': 'te', 'internal_code': 'te'}",
+      "doc": "end time",
+      "equations": "{64: {'rhs': ' O_11 D_0 V_1 D_1', 'type': 'generic', 'doc': 'end time', 'network': 'root', 'incidence_list': ['1']}}",
+      "index_structures": "[1]",
+      "label": "te",
+      "network": "root",
+      "type": "frame",
+      "units": "[1, 0, 0, 0, 0, 0, 0, 0]"
+    },
+    "92": {
+      "aliases": "{'global_ID': ' V_92', 'python': 'm', 'cpp': 'm', 'matlab': 'm', 'latex': 'm', 'internal_code': 'm'}",
+      "doc": "mass",
+      "equations": "{}",
+      "index_structures": "[1]",
+      "label": "m",
+      "network": "physical",
+      "type": "state",
+      "units": "[0, 0, 0, 1, 0, 0, 0, 0]"
+    },
+    "93": {
+      "aliases": "{'global_ID': ' V_93', 'python': 'kd_x', 'cpp': 'kd_x', 'matlab': 'kd_x', 'latex': 'k^{d_x}', 'internal_code': 'kd_x'}",
+      "doc": "diffusional mass diffusivity per area.",
+      "equations": "{81: {'rhs': ' F_11 D_0 V_49 D_1  O_5  I_5 O_5  D_0 V_18 O_4 F_15 D_0 V_13 D_1 O_3 F_15 D_0 V_31 D_1 D_1 O_4 O_7 D_0 V_11 D_7 V_31 D_1', 'type': 'generic', 'doc': 'diffusional mass diffusivity per area.', 'network': 'materialDB', 'incidence_list': ['11', '13', '18', '31', '31', '49']}}",
+      "index_structures": "[5, 6, 9]",
+      "label": "kd_x",
+      "network": "materialDB",
+      "type": "property",
+      "units": "[1, -4, 2, -1, 0, 0, 0, 0]"
+    },
+    "94": {
+      "aliases": "{'global_ID': ' V_94', 'python': 'mm', 'cpp': 'mm', 'matlab': 'mm', 'latex': '\\\\lambda', 'internal_code': 'mm'}",
+      "doc": "molecular masses ",
+      "equations": "{}",
+      "index_structures": "[3]",
+      "label": "mm",
+      "network": "materialDB",
+      "type": "constant",
+      "units": "[0, 0, -1, 1, 0, 0, 0, 0]"
+    },
+    "95": {
+      "aliases": "{'global_ID': ' V_95', 'python': 'kc_x', 'cpp': 'kc_x', 'matlab': 'kc_x', 'latex': 'k^{c_x}', 'internal_code': 'kc_x'}",
+      "doc": "convective mass diffusivity per area",
+      "equations": "{76: {'rhs': ' F_11 D_0 V_41 D_1  O_5  I_1 O_5  D_0 V_94 O_5 I_3 O_14 I_5 O_5 F_15 D_0 V_31 D_1 D_1 O_4 F_15 D_0 V_13 D_1 O_4 O_7 D_0 V_11 D_7 V_15 D_1 O_4 V_18', 'type': 'generic', 'doc': 'convective mass diffusivity per area', 'network': 'materialDB', 'incidence_list': ['11', '13', '15', '18', '31', '41', '94']}}",
+      "index_structures": "[1, 2, 9]",
+      "label": "kc_x",
+      "network": "materialDB",
+      "type": "property",
+      "units": "[1, -1, 0, 0, 0, 0, 0, 0]"
+    },
+    "96": {
+      "aliases": "{'global_ID': ' V_96', 'python': 'rho', 'cpp': 'rho', 'matlab': 'rho', 'latex': '\\\\rho', 'internal_code': 'rho'}",
+      "doc": "mass density",
+      "equations": "{71: {'rhs': ' V_92 O_4 F_15 D_0 V_13 D_1', 'type': 'generic', 'doc': 'mass density', 'network': 'materialDB', 'incidence_list': ['13', '92']}}",
+      "index_structures": "[1]",
+      "label": "rho",
+      "network": "materialDB",
+      "type": "property",
+      "units": "[0, -3, 0, 1, 0, 0, 0, 0]"
+    },
+    "98": {
+      "aliases": "{'global_ID': ' V_98', 'python': 'kv_x', 'cpp': 'kv_x', 'matlab': 'kv_x', 'latex': 'k^{v_x}', 'internal_code': 'kv_x'}",
+      "doc": "convective volume flow per area",
+      "equations": "{78: {'rhs': ' F_15 D_0 V_96 D_1 O_4 V_95', 'type': 'generic', 'doc': 'convective volume flow per area', 'network': 'materialDB', 'incidence_list': ['95', '96']}}",
+      "index_structures": "[1, 2, 9]",
+      "label": "kv_x",
+      "network": "materialDB",
+      "type": "property",
+      "units": "[1, 2, 0, -1, 0, 0, 0, 0]"
+    },
+    "99": {
+      "aliases": "{'global_ID': ' V_99', 'python': 'kv_x', 'cpp': 'kv_x', 'matlab': 'kv_x', 'latex': 'k^{v_x}', 'internal_code': 'kv_x'}",
+      "doc": "link to get volumetric flow coefficient",
+      "equations": "{79: {'rhs': ' V_98', 'type': 'generic', 'doc': 'link to get volumetric flow coefficient', 'network': 'materialDB >>> liquid', 'incidence_list': ['98']}}",
+      "index_structures": "[1, 2, 9]",
+      "label": "kv_x",
+      "network": "materialDB >>> liquid",
+      "type": "transform",
+      "units": "[1, 2, 0, -1, 0, 0, 0, 0]"
+    },
+    "100": {
+      "aliases": "{'global_ID': ' V_100', 'python': 'kd_x', 'cpp': 'kd_x', 'matlab': 'kd_x', 'latex': 'k^{d_x}', 'internal_code': 'kd_x'}",
+      "doc": "link to get diffusional mass flow coefficient",
+      "equations": "{80: {'rhs': ' V_93', 'type': 'generic', 'doc': 'link to get diffusional mass flow coefficient', 'network': 'materialDB >>> liquid', 'incidence_list': ['93']}}",
+      "index_structures": "[5, 6, 9]",
+      "label": "kd_x",
+      "network": "materialDB >>> liquid",
+      "type": "transform",
+      "units": "[1, -4, 2, -1, 0, 0, 0, 0]"
+    },
+    "101": {
+      "aliases": "{'global_ID': ' V_101', 'python': 'N', 'cpp': 'N', 'matlab': 'N', 'latex': 'N', 'internal_code': 'N'}",
+      "doc": "number of particles",
+      "equations": "{}",
+      "index_structures": "[1]",
+      "label": "N",
+      "network": "solid",
+      "type": "state",
+      "units": "[0, 0, 0, 0, 0, 0, 0, 0]"
+    },
+    "104": {
+      "aliases": "{'global_ID': ' V_104', 'python': 'r', 'cpp': 'r', 'matlab': 'r', 'latex': 'r', 'internal_code': 'r'}",
+      "doc": "radius",
+      "equations": "{}",
+      "index_structures": "[1]",
+      "label": "r",
+      "network": "physical",
+      "type": "frame",
+      "units": "[0, 1, 0, 0, 0, 0, 0, 0]"
+    },
+    "106": {
+      "aliases": "{'global_ID': ' V_106', 'python': 'k_granulate', 'cpp': 'k_granulate', 'matlab': 'k_granulate', 'latex': 'k_{granulate}', 'internal_code': 'k_granulate'}",
+      "doc": "kinetic constant for granulation dynamics",
+      "equations": "{}",
+      "index_structures": "[9]",
+      "label": "k_granulate",
+      "network": "materialDB",
+      "type": "constant",
+      "units": "[-1, 0, 0, 0, 0, 0, 0, 0]"
+    },
+    "107": {
+      "aliases": "{'global_ID': ' V_107', 'python': 'k_granulate', 'cpp': 'k_granulate', 'matlab': 'k_granulate', 'latex': 'k_{granulate}', 'internal_code': 'k_granulate'}",
+      "doc": "link to kinetic granulation constant",
+      "equations": "{86: {'rhs': ' V_106', 'type': 'generic', 'doc': 'link to kinetic granulation constant', 'network': 'materialDB >>> solid', 'incidence_list': ['106']}}",
+      "index_structures": "[9]",
+      "label": "k_granulate",
+      "network": "materialDB >>> solid",
+      "type": "transform",
+      "units": "[-1, 0, 0, 0, 0, 0, 0, 0]"
+    },
+    "108": {
+      "aliases": "{'global_ID': ' V_108', 'python': 'pN', 'cpp': 'pN', 'matlab': 'pN', 'latex': '\\\\tilde{N}', 'internal_code': 'pN'}",
+      "doc": "granulation dynamics",
+      "equations": "{87: {'rhs': ' V_107 O_4 V_104', 'type': 'generic', 'doc': 'granulation dynamics', 'network': 'solid', 'incidence_list': ['104', '107']}}",
+      "index_structures": "[1, 9]",
+      "label": "pN",
+      "network": "solid",
+      "type": "conversion",
+      "units": "[-1, 1, 0, 0, 0, 0, 0, 0]"
+    },
+    "110": {
+      "aliases": "{'global_ID': ' V_110', 'python': 'dN', 'cpp': 'dN', 'matlab': 'dN', 'latex': '{N}_{t}', 'internal_code': 'dN'}",
+      "doc": "population balance PDE",
+      "equations": "{89: {'rhs': ' O_7 D_0 V_108 D_7 V_104 D_1', 'type': 'generic', 'doc': 'population balance PDE', 'network': 'solid', 'incidence_list': ['104', '108']}}",
+      "index_structures": "[1, 9]",
+      "label": "dN",
+      "network": "solid",
+      "type": "state",
+      "units": "[-1, 0, 0, 0, 0, 0, 0, 0]"
+    },
+    "111": {
+      "aliases": "{'global_ID': ' V_111', 'python': 'A', 'cpp': 'A', 'matlab': 'A', 'latex': 'A', 'internal_code': 'A'}",
+      "doc": "definition of Helmholtz energy",
+      "equations": "{90: {'rhs': ' V_11 O_1 V_14 O_4 V_12', 'type': 'generic', 'doc': 'definition of Helmholtz energy', 'network': 'physical', 'incidence_list': ['11', '12', '14']}}",
+      "index_structures": "[1]",
+      "label": "A",
+      "network": "physical",
+      "type": "secondaryState",
+      "units": "[-2, 2, 0, 1, 0, 0, 0, 0]"
+    },
+    "112": {
+      "aliases": "{'global_ID': ' V_112', 'python': 'G', 'cpp': 'G', 'matlab': 'G', 'latex': 'G', 'internal_code': 'G'}",
+      "doc": "definition of Gibbs free energy",
+      "equations": "{91: {'rhs': ' V_11 O_0 V_15 O_4 V_13 O_1 V_14 O_4 V_12', 'type': 'generic', 'doc': 'definition of Gibbs free energy', 'network': 'physical', 'incidence_list': ['11', '12', '13', '14', '15']}}",
+      "index_structures": "[1]",
+      "label": "G",
+      "network": "physical",
+      "type": "secondaryState",
+      "units": "[-2, 2, 0, 1, 0, 0, 0, 0]"
+    },
+    "113": {
+      "aliases": "{'global_ID': ' V_113', 'python': 'y', 'cpp': 'y', 'matlab': 'y', 'latex': 'y', 'internal_code': 'y'}",
+      "doc": "mixing index",
+      "equations": "{}",
+      "index_structures": "[1]",
+      "label": "y",
+      "network": "mixing",
+      "type": "state",
+      "units": "[0, 0, 0, 0, 0, 0, 0, 0]"
+    },
+    "114": {
+      "aliases": "{'global_ID': ' V_114', 'python': 'beta', 'cpp': 'beta', 'matlab': 'beta', 'latex': '\\\\beta', 'internal_code': 'beta'}",
+      "doc": "mixing beta parameter",
+      "equations": "{}",
+      "index_structures": "[]",
+      "label": "beta",
+      "network": "mixing",
+      "type": "constant",
+      "units": "[0, 0, 0, 0, 0, 0, 0, 0]"
+    },
+    "115": {
+      "aliases": "{'global_ID': ' V_115', 'python': 'gamma', 'cpp': 'gamma', 'matlab': 'gamma', 'latex': '\\\\gamma', 'internal_code': 'gamma'}",
+      "doc": "mixing gamma parameter",
+      "equations": "{}",
+      "index_structures": "[]",
+      "label": "gamma",
+      "network": "mixing",
+      "type": "constant",
+      "units": "[0, 0, 0, 0, 0, 0, 0, 0]"
+    },
+    "116": {
+      "aliases": "{'global_ID': ' V_116', 'python': 'f', 'cpp': 'f', 'matlab': 'f', 'latex': 'f', 'internal_code': 'f'}",
+      "doc": "stirrer frequency",
+      "equations": "{}",
+      "index_structures": "[]",
+      "label": "f",
+      "network": "mixing",
+      "type": "constant",
+      "units": "[-1, 0, 0, 0, 0, 0, 0, 0]"
+    },
+    "117": {
+      "aliases": "{'global_ID': ' V_117', 'python': 'a', 'cpp': 'a', 'matlab': 'a', 'latex': 'a', 'internal_code': 'a'}",
+      "doc": "stirrer amplitude",
+      "equations": "{}",
+      "index_structures": "[1, 9]",
+      "label": "a",
+      "network": "mixing",
+      "type": "constant",
+      "units": "[0, 0, 0, 0, 0, 0, 0, 0]"
+    },
+    "118": {
+      "aliases": "{'global_ID': ' V_118', 'python': 'alpha', 'cpp': 'alpha', 'matlab': 'alpha', 'latex': '\\\\alpha', 'internal_code': 'alpha'}",
+      "doc": "stirrer function",
+      "equations": "{93: {'rhs': ' V_117 O_4 F_4 D_0 V_1 O_4 V_116 D_1', 'type': 'generic', 'doc': 'stirrer function', 'network': 'mixing', 'incidence_list': ['1', '116', '117']}}",
+      "index_structures": "[1, 9]",
+      "label": "alpha",
+      "network": "mixing",
+      "type": "parameter",
+      "units": "[0, 0, 0, 0, 0, 0, 0, 0]"
+    },
+    "120": {
+      "aliases": "{'global_ID': ' V_120', 'python': 'one', 'cpp': 'one', 'matlab': 'one', 'latex': 'one', 'internal_code': 'one'}",
+      "doc": "one",
+      "equations": "{94: {'rhs': ' O_11 D_0 V_5 D_7- D_1', 'type': 'generic', 'doc': 'one', 'network': 'root', 'incidence_list': ['5']}}",
+      "index_structures": "[]",
+      "label": "one",
+      "network": "root",
+      "type": "constant",
+      "units": "[0, 0, 0, 0, 0, 0, 0, 0]"
+    },
+    "121": {
+      "aliases": "{'global_ID': ' V_121', 'python': 'y_one', 'cpp': 'y_one', 'matlab': 'y_one', 'latex': '1', 'internal_code': 'y_one'}",
+      "doc": "a one of the same dimension as y",
+      "equations": "{95: {'rhs': ' O_11 D_0 V_113 D_7- D_1', 'type': 'generic', 'doc': 'one of the same dimension as y', 'network': 'mixing', 'incidence_list': ['113']}}",
+      "index_structures": "[1]",
+      "label": "y_one",
+      "network": "mixing",
+      "type": "constant",
+      "units": "[0, 0, 0, 0, 0, 0, 0, 0]"
+    },
+    "122": {
+      "aliases": "{'global_ID': ' V_122', 'python': 'dy', 'cpp': 'dy', 'matlab': 'dy', 'latex': 'dy', 'internal_code': 'dy'}",
+      "doc": "mixing differential equation",
+      "equations": "{96: {'rhs': ' V_118 O_4 D_0 V_115 O_4 V_113 O_1 V_114 O_4 D_0 V_113 O_1 V_121 D_1 D_1', 'type': 'generic', 'doc': 'mixing differential equation', 'network': 'mixing', 'incidence_list': ['113', '113', '114', '115', '118', '121']}}",
+      "index_structures": "[1, 9]",
+      "label": "dy",
+      "network": "mixing",
+      "type": "state",
+      "units": "[0, 0, 0, 0, 0, 0, 0, 0]"
+    },
+    "123": {
+      "aliases": "{'global_ID': ' V_123', 'python': 'gugus', 'cpp': 'gugus', 'matlab': 'gugus', 'latex': 'gugus', 'internal_code': 'gugus'}",
+      "doc": "_new_",
+      "equations": "{}",
+      "index_structures": "[]",
+      "label": "gugus",
+      "network": "physical",
+      "type": "frame",
+      "units": "[0, 0, 0, 0, 0, 0, 0, 0]"
+    }
+  },
+  "indices": {
+    "1": {
+      "type": "index",
+      "label": "node",
+      "network": [
+        "root",
+        "physical",
+        "macroscopic",
+        "fluid",
+        "liquid",
+        "gas",
+        "solid",
+        "materialDB",
+        "mixing",
+        "control"
+      ],
+      "aliases": {
+        "global_ID": " I_1",
+        "python": "N",
+        "cpp": "N",
+        "matlab": "N",
+        "latex": "N",
+        "internal_code": "N"
+      }
+    },
+    "2": {
+      "type": "index",
+      "label": "arc",
+      "network": [
+        "root",
+        "physical",
+        "macroscopic",
+        "fluid",
+        "liquid",
+        "gas",
+        "solid",
+        "materialDB",
+        "mixing",
+        "control"
+      ],
+      "aliases": {
+        "global_ID": " I_2",
+        "python": "A",
+        "cpp": "A",
+        "matlab": "A",
+        "latex": "A",
+        "internal_code": "A"
+      }
+    },
+    "3": {
+      "type": "index",
+      "label": "species",
+      "network": [
+        "physical",
+        "macroscopic",
+        "fluid",
+        "liquid",
+        "gas",
+        "solid",
+        "materialDB",
+        "mixing"
+      ],
+      "aliases": {
+        "global_ID": " I_3",
+        "python": "S",
+        "cpp": "S",
+        "matlab": "S",
+        "latex": "S",
+        "internal_code": "S"
+      }
+    },
+    "4": {
+      "type": "index",
+      "label": "species_conversion",
+      "network": [
+        "physical",
+        "macroscopic",
+        "fluid",
+        "liquid",
+        "gas",
+        "solid",
+        "materialDB",
+        "mixing"
+      ],
+      "aliases": {
+        "global_ID": " I_4",
+        "python": "K",
+        "cpp": "K",
+        "matlab": "K",
+        "latex": "K",
+        "internal_code": "K"
+      }
+    },
+    "5": {
+      "type": "block_index",
+      "label": "node & species",
+      "indices": [
+        1,
+        3
+      ],
+      "network": [
+        "physical",
+        "macroscopic",
+        "fluid",
+        "liquid",
+        "gas",
+        "solid",
+        "materialDB",
+        "mixing"
+      ],
+      "aliases": {
+        "global_ID": " I_5",
+        "python": "N_x_S",
+        "cpp": "N_x_S",
+        "matlab": "N_x_S",
+        "latex": "{N S}",
+        "internal_code": "N & S"
+      }
+    },
+    "6": {
+      "type": "block_index",
+      "label": "arc & species",
+      "indices": [
+        2,
+        3
+      ],
+      "network": [
+        "physical",
+        "macroscopic",
+        "fluid",
+        "liquid",
+        "gas",
+        "solid",
+        "materialDB",
+        "mixing"
+      ],
+      "aliases": {
+        "global_ID": " I_6",
+        "python": "A_x_S",
+        "cpp": "A_x_S",
+        "matlab": "A_x_S",
+        "latex": "{A S}",
+        "internal_code": "A & S"
+      }
+    },
+    "7": {
+      "type": "block_index",
+      "label": "node & species_conversion",
+      "indices": [
+        1,
+        4
+      ],
+      "network": [
+        "physical",
+        "macroscopic",
+        "fluid",
+        "liquid",
+        "gas",
+        "solid",
+        "materialDB",
+        "mixing"
+      ],
+      "aliases": {
+        "global_ID": " I_7",
+        "python": "N_x_K",
+        "cpp": "N_x_K",
+        "matlab": "N_x_K",
+        "latex": "{N K}",
+        "internal_code": "N & K"
+      }
+    },
+    "8": {
+      "type": "block_index",
+      "label": "species_conversion & species",
+      "indices": [
+        4,
+        3
+      ],
+      "network": [
+        "physical",
+        "macroscopic",
+        "fluid",
+        "liquid",
+        "gas",
+        "solid",
+        "materialDB",
+        "mixing"
+      ],
+      "aliases": {
+        "global_ID": " I_8",
+        "python": "K_x_S",
+        "cpp": "K_x_S",
+        "matlab": "K_x_S",
+        "latex": "{K S}",
+        "internal_code": "K & S"
+      }
+    },
+    "9": {
+      "type": "index",
+      "label": "dt",
+      "network": [
+        "root",
+        "physical",
+        "macroscopic",
+        "fluid",
+        "liquid",
+        "gas",
+        "solid",
+        "materialDB",
+        "mixing",
+        "control"
+      ],
+      "aliases": {
+        "global_ID": " I_9",
+        "python": "dt",
+        "cpp": "dt",
+        "matlab": "dt",
+        "latex": "dt",
+        "internal_code": "dt"
+      }
+    }
+  },
+  "Ontology_global_IDs": {
+    "variable": 123,
+    "equation": 98
+  }
+}
